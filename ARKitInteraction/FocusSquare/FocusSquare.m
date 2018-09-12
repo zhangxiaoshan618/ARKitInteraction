@@ -22,6 +22,7 @@ typedef NS_ENUM(NSUInteger, FocusSquareState) {
 @property (nonatomic, strong) ARCamera *stateCamera;
 @property (nonatomic, strong) UIColor *primaryColor;
 @property (nonatomic, strong) UIColor *fillColor;
+@property (nonatomic, strong) ARPlaneAnchor *currentPlaneAnchor;
 
 @property (nonatomic, assign) BOOL isOpen;
 @property (nonatomic, assign) BOOL isAnimating;
@@ -87,14 +88,6 @@ typedef NS_ENUM(NSUInteger, FocusSquareState) {
     return self;
 }
 
-
-//func hide() {
-//    guard action(forKey: "hide") == nil else { return }
-//
-//    displayNodeHierarchyOnTop(false)
-//    runAction(.fadeOut(duration: 0.5), forKey: "hide")
-//}
-
 - (void)hide {
     if ([self actionForKey:@"hide"] == nil) {
         [self displayNodeHierarchyOnTop:NO];
@@ -117,37 +110,22 @@ typedef NS_ENUM(NSUInteger, FocusSquareState) {
     [self performOpenAnimation];
 }
 
-//private func displayAsOpen(for hitTestResult: ARHitTestResult, camera: ARCamera?) {
-//    performOpenAnimation()
-//    let position = hitTestResult.worldTransform.translation
-//    recentFocusSquarePositions.append(position)
-//    updateTransform(for: position, hitTestResult: hitTestResult, camera: camera)
-//}
 /// 当探测到一个平面的时候会调用这个方法
 - (void)displayAsOpenFor:(ARHitTestResult *)hitTestResult camera:(ARCamera *)camera {
     [self performOpenAnimation];
     simd_float3 position = [PositionTranslation getTranslationWithMatrixFloat4x4:hitTestResult.worldTransform];
     [self.recentFocusSquarePositions addObject:hitTestResult];
-    // TODO:
+    [self updateTransformFor:position hitTestResult:hitTestResult camera:camera];
     
 }
 
 /// Called when a plane has been detected.
-//private func displayAsClosed(for hitTestResult: ARHitTestResult, planeAnchor: ARPlaneAnchor, camera: ARCamera?) {
-//    performCloseAnimation(flash: !anchorsOfVisitedPlanes.contains(planeAnchor))
-//    anchorsOfVisitedPlanes.insert(planeAnchor)
-//    let position = hitTestResult.worldTransform.translation
-//    recentFocusSquarePositions.append(position)
-//    updateTransform(for: position, hitTestResult: hitTestResult, camera: camera)
-//}
-
-
 - (void)displayAsClosedFor:(ARHitTestResult *)hitTestResult planeAnchor:(ARPlaneAnchor *)planeAnchor camera:(ARCamera *)camera {
     [self performCloseAnimationFlash:![self.anchorsOfVisitedPlanes containsObject:planeAnchor]];
     [self.anchorsOfVisitedPlanes addObject:planeAnchor];
     simd_float3 position = [PositionTranslation getTranslationWithMatrixFloat4x4:hitTestResult.worldTransform];
     [self.recentFocusSquarePositions addObject:hitTestResult];
-    // TODO:
+    [self updateTransformFor:position hitTestResult:hitTestResult camera:camera];
 }
 
 
@@ -175,71 +153,33 @@ typedef NS_ENUM(NSUInteger, FocusSquareState) {
     }
     simd_float3 average = positionCount / self.recentFocusSquarePositions.count;
     self.simdPosition = average;
-    // TODO:
-//    self.simdScale = (simd_float3)[FocusSquare scal]
+    self.simdScale = (simd_float3)[self scaleBasedOnDistanceCamera:camera];
     
-    
-}
+    // 纠正相机方形的y旋转
+    if (camera == nil) {
+        return;
+    }
 
-//private func updateAlignment(for hitTestResult: ARHitTestResult, yRotationAngle angle: Float) {
-//    // Abort if an animation is currently in progress.
-//    if isChangingAlignment {
-//        return
-//    }
-//
-//    var shouldAnimateAlignmentChange = false
-//
-//    let tempNode = SCNNode()
-//    tempNode.simdRotation = float4(0, 1, 0, angle)
-//
-//    // Determine current alignment
-//    var alignment: ARPlaneAnchor.Alignment?
-//    if let planeAnchor = hitTestResult.anchor as? ARPlaneAnchor {
-//        alignment = planeAnchor.alignment
-//    } else if hitTestResult.type == .estimatedHorizontalPlane {
-//        alignment = .horizontal
-//    } else if hitTestResult.type == .estimatedVerticalPlane {
-//        alignment = .vertical
-//    }
-//
-//    // add to list of recent alignments
-//    if alignment != nil {
-//        recentFocusSquareAlignments.append(alignment!)
-//    }
-//
-//    // Average using several most recent alignments.
-//    recentFocusSquareAlignments = Array(recentFocusSquareAlignments.suffix(20))
-//
-//    let horizontalHistory = recentFocusSquareAlignments.filter({ $0 == .horizontal }).count
-//    let verticalHistory = recentFocusSquareAlignments.filter({ $0 == .vertical }).count
-//
-//    // Alignment is same as most of the history - change it
-//    if alignment == .horizontal && horizontalHistory > 15 ||
-//        alignment == .vertical && verticalHistory > 10 ||
-//        hitTestResult.anchor is ARPlaneAnchor {
-//            if alignment != currentAlignment {
-//                shouldAnimateAlignmentChange = true
-//                currentAlignment = alignment
-//                recentFocusSquareAlignments.removeAll()
-//            }
-//        } else {
-//            // Alignment is different than most of the history - ignore it
-//            alignment = currentAlignment
-//            return
-//        }
-//
-//    if alignment == .vertical {
-//        tempNode.simdOrientation = hitTestResult.worldTransform.orientation
-//        shouldAnimateAlignmentChange = true
-//    }
-//
-//    // Change the focus square's alignment
-//    if shouldAnimateAlignmentChange {
-//        performAlignmentAnimation(to: tempNode.simdOrientation)
-//    } else {
-//        simdOrientation = tempNode.simdOrientation
-//    }
-//}
+    CGFloat tilt = fabsf(camera.eulerAngles.x);
+    CGFloat threshold1 = M_PI_2 * 0.65;
+    CGFloat threshold2 = M_PI_2 * 0.75;
+    CGFloat yaw = atan2f((camera.transform.columns[0]).x, (camera.transform.columns[1]).x);
+    CGFloat angle = 0;
+    
+    if (tilt >= 0 && tilt < threshold1) {
+        angle = camera.eulerAngles.y;
+    }else if (tilt >= threshold1 && tilt < threshold2) {
+        CGFloat relativeInRange = fabs((tilt - threshold1) / (threshold2 - threshold1));
+        CGFloat normalizedY = [self normalizeAngle:camera.eulerAngles.y forMinimalRotationTo:yaw];
+        angle = normalizedY * (1 - relativeInRange) + yaw * relativeInRange;
+    }else {
+        angle = yaw;
+    }
+    
+    if (self.state != FocusSquareStateInitializing) {
+        [self updateAlignmentFor:hitTestResult yRotationAngle:angle];
+    }
+}
 
 - (void)updateAlignmentFor:(ARHitTestResult *)hitTestResult yRotationAngle:(CGFloat)angle {
     // 如果当前动画正在进行，则中止
@@ -303,7 +243,7 @@ typedef NS_ENUM(NSUInteger, FocusSquareState) {
     
     // 改变焦点方块的对齐方式
     if (shouldAnimateAlignmentChange) {
-        // TODO:
+        [self performAlignmentAnimationTo:tempNode.simdOrientation];
     }else {
         self.simdOrientation = tempNode.simdOrientation;
     }
@@ -313,7 +253,7 @@ typedef NS_ENUM(NSUInteger, FocusSquareState) {
 // 将角度标准化为90度，使得另一个角度的旋转最小
 - (CGFloat)normalizeAngle:(CGFloat)angle forMinimalRotationTo:(CGFloat)ref {
     CGFloat normalized = angle;
-    while (abs(normalized - ref) > M_PI_4) {
+    while (fabs(normalized - ref) > M_PI_4) {
         if (angle > ref) {
             normalized -= M_PI_2;
         }else {
@@ -421,6 +361,18 @@ typedef NS_ENUM(NSUInteger, FocusSquareState) {
     }
 }
 
+- (void)performAlignmentAnimationTo:(simd_quatf)newOrientation  {
+    self.isChangingAlignment = YES;
+    [SCNTransaction begin];
+    SCNTransaction.completionBlock = ^{
+        self.isChangingAlignment = NO;
+    };
+    SCNTransaction.animationDuration = 0.5;
+    SCNTransaction.animationTimingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    self.simdOrientation = newOrientation;
+    [SCNTransaction commit];
+}
+
 
 #pragma mark - Animations and Actions
 
@@ -513,23 +465,27 @@ typedef NS_ENUM(NSUInteger, FocusSquareState) {
     return _recentFocusSquarePositions;
 }
 
-- (simd_float3 )lastPosition {
+- (simd_float3)lastPosition {
     return [PositionTranslation getTranslationWithMatrixFloat4x4:self.stateHitTestResult.worldTransform];
 }
 
-- (void)setState:(FocusSquareState)state {
-    if (_state != state) {
-        _state = state;
+- (void)setState:(FocusSquareState)state for:(ARHitTestResult *)hitTestResult camera:(ARCamera *)camera {
+    if (self.state != state) {
+        self.state = state;
         switch (state) {
             case FocusSquareStateInitializing:
                 [self displayAsBillBoard];
                 break;
-                // TODO:
-            default:
+                
+            case FocusSquareStateDetecting:
+                [self displayAsOpenFor:hitTestResult camera:camera];
+                self.currentPlaneAnchor = nil;
                 break;
         }
     }
 }
+
+
 
 - (SCNNode *)fillPlane {
     
