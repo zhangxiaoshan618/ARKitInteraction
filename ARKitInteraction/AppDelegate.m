@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LJNetworkService.h"
+#import "AFNetworking.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    UIImage *image = [UIImage imageNamed:@"home"];
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.9);
+    NSString *url = @"http://preview-app.api.ke.com/user/house/uploadNoteImage";
+    NSString *fileDataName = @"file_data";
+    [[LJNetworkService defaultService] postWithUrl:url parameters:@{@"showing_house_id":@"101102939530"} modelClass:nil constructingBody:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:imageData name:fileDataName fileName:@"haha.png" mimeType:@"image/jpeg"];
+    } progress:^(NSProgress *progress) {
+        
+    } completion:^(id data, NSError *error) {
+        
+    }];
+    
     return YES;
 }
 

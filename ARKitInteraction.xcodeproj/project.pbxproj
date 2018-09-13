@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C97C976555CCF21B23EC084 /* libPods-ARKitInteraction.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C92F81556EF3892EDF0D0D7D /* libPods-ARKitInteraction.a */; };
+		6E748227214A04C700E66D1F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E748226214A04C700E66D1F /* MainViewController.m */; };
+		6E748229214A05F200E66D1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E748228214A05F200E66D1F /* Media.xcassets */; };
+		6E74822C214A098600E66D1F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E74822B214A098600E66D1F /* LoginViewController.m */; };
 		B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C89D214408ED008E87CF /* AppDelegate.m */; };
 		B3E4C8A0214408ED008E87CF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E4C89F214408ED008E87CF /* art.scnassets */; };
 		B3E4C8A3214408ED008E87CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C8A2214408ED008E87CF /* ViewController.m */; };
@@ -20,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B4158F8CF176958642A6AD7 /* Pods-ARKitInteraction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitInteraction.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitInteraction/Pods-ARKitInteraction.release.xcconfig"; sourceTree = "<group>"; };
+		6E748225214A04C700E66D1F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6E748226214A04C700E66D1F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6E748228214A05F200E66D1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		6E74822A214A098600E66D1F /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		6E74822B214A098600E66D1F /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B3158C12F4F03CCED00FD32A /* Pods-ARKitInteraction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitInteraction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitInteraction/Pods-ARKitInteraction.debug.xcconfig"; sourceTree = "<group>"; };
 		B3E4C899214408ED008E87CF /* ARKitInteraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitInteraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E4C89C214408ED008E87CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3E4C89D214408ED008E87CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -37,6 +48,7 @@
 		B3F11F622144DF03008CADFC /* FocusSquare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FocusSquare.m; sourceTree = "<group>"; };
 		B3F11F642144FE4A008CADFC /* Segment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Segment.h; sourceTree = "<group>"; };
 		B3F11F652144FE4A008CADFC /* Segment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Segment.m; sourceTree = "<group>"; };
+		C92F81556EF3892EDF0D0D7D /* libPods-ARKitInteraction.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ARKitInteraction.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,17 +56,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C97C976555CCF21B23EC084 /* libPods-ARKitInteraction.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		284349973684FED205025FA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3158C12F4F03CCED00FD32A /* Pods-ARKitInteraction.debug.xcconfig */,
+				1B4158F8CF176958642A6AD7 /* Pods-ARKitInteraction.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E748224214A049A00E66D1F /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				6E748225214A04C700E66D1F /* MainViewController.h */,
+				6E748226214A04C700E66D1F /* MainViewController.m */,
+				6E748228214A05F200E66D1F /* Media.xcassets */,
+				6E74822A214A098600E66D1F /* LoginViewController.h */,
+				6E74822B214A098600E66D1F /* LoginViewController.m */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		ABC0F5949FD2EA3C52146685 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C92F81556EF3892EDF0D0D7D /* libPods-ARKitInteraction.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B3E4C890214408ED008E87CF = {
 			isa = PBXGroup;
 			children = (
 				B3E4C89B214408ED008E87CF /* ARKitInteraction */,
 				B3E4C89A214408ED008E87CF /* Products */,
+				284349973684FED205025FA6 /* Pods */,
+				ABC0F5949FD2EA3C52146685 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +113,7 @@
 		B3E4C89B214408ED008E87CF /* ARKitInteraction */ = {
 			isa = PBXGroup;
 			children = (
+				6E748224214A049A00E66D1F /* MainVC */,
 				B3E4C89C214408ED008E87CF /* AppDelegate.h */,
 				B3E4C89D214408ED008E87CF /* AppDelegate.m */,
 				B3F11F5B2144D4E9008CADFC /* AdditionalViewControllers */,
@@ -128,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3E4C8B1214408EE008E87CF /* Build configuration list for PBXNativeTarget "ARKitInteraction" */;
 			buildPhases = (
+				A0F4A5DB47E86C91E1D231BD /* [CP] Check Pods Manifest.lock */,
 				B3E4C895214408ED008E87CF /* Sources */,
 				B3E4C896214408ED008E87CF /* Frameworks */,
 				B3E4C897214408ED008E87CF /* Resources */,
+				735B2237149315980BCD0905 /* [CP] Embed Pods Frameworks */,
+				AAA15C467A99443670D0DD93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E748229214A05F200E66D1F /* Media.xcassets in Resources */,
 				B3E4C8A0214408ED008E87CF /* art.scnassets in Resources */,
 				B3E4C8AB214408EE008E87CF /* LaunchScreen.storyboard in Resources */,
 				B3E4C8A8214408EE008E87CF /* Assets.xcassets in Resources */,
@@ -187,15 +236,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		735B2237149315980BCD0905 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARKitInteraction/Pods-ARKitInteraction-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0F4A5DB47E86C91E1D231BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARKitInteraction-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAA15C467A99443670D0DD93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARKitInteraction/Pods-ARKitInteraction-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B3E4C895214408ED008E87CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E74822C214A098600E66D1F /* LoginViewController.m in Sources */,
 				B3F11F602144D65C008CADFC /* PositionTranslation.m in Sources */,
 				B3F11F632144DF03008CADFC /* FocusSquare.m in Sources */,
 				B3E4C8A3214408ED008E87CF /* ViewController.m in Sources */,
 				B3E4C8AE214408EE008E87CF /* main.m in Sources */,
+				6E748227214A04C700E66D1F /* MainViewController.m in Sources */,
 				B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */,
 				B3F11F662144FE4A008CADFC /* Segment.m in Sources */,
 			);
@@ -279,6 +381,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -331,17 +434,20 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		B3E4C8B2214408EE008E87CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3158C12F4F03CCED00FD32A /* Pods-ARKitInteraction.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AHJHGYFA8S;
+				DEVELOPMENT_TEAM = XW5558TH45;
 				INFOPLIST_FILE = ARKitInteraction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,11 +460,13 @@
 		};
 		B3E4C8B3214408EE008E87CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B4158F8CF176958642A6AD7 /* Pods-ARKitInteraction.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AHJHGYFA8S;
+				DEVELOPMENT_TEAM = XW5558TH45;
 				INFOPLIST_FILE = ARKitInteraction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
