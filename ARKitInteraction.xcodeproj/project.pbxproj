@@ -11,6 +11,10 @@
 		6E748227214A04C700E66D1F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E748226214A04C700E66D1F /* MainViewController.m */; };
 		6E748229214A05F200E66D1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E748228214A05F200E66D1F /* Media.xcassets */; };
 		6E74822C214A098600E66D1F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E74822B214A098600E66D1F /* LoginViewController.m */; };
+		B30C392E214BE9BB00F444B4 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C392D214BE9BB00F444B4 /* MyViewController.m */; };
+		B30C3931214BE9CB00F444B4 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3930214BE9CB00F444B4 /* MyView.m */; };
+		B30C3934214BE9D600F444B4 /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3933214BE9D600F444B4 /* MyModel.m */; };
+		B30C3937214BE9E500F444B4 /* MyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3936214BE9E500F444B4 /* MyViewModel.m */; };
 		B3318C502149F90000BA9F1F /* VirtualObjectLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B3318C4F2149F90000BA9F1F /* VirtualObjectLoader.m */; };
 		B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B3318C522149F96400BA9F1F /* VirtualObject.m */; };
 		B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C89D214408ED008E87CF /* AppDelegate.m */; };
@@ -32,6 +36,14 @@
 		6E748228214A05F200E66D1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		6E74822A214A098600E66D1F /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6E74822B214A098600E66D1F /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B30C392C214BE9BB00F444B4 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		B30C392D214BE9BB00F444B4 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		B30C392F214BE9CB00F444B4 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		B30C3930214BE9CB00F444B4 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		B30C3932214BE9D600F444B4 /* MyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
+		B30C3933214BE9D600F444B4 /* MyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
+		B30C3935214BE9E500F444B4 /* MyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewModel.h; sourceTree = "<group>"; };
+		B30C3936214BE9E500F444B4 /* MyViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewModel.m; sourceTree = "<group>"; };
 		B3158C12F4F03CCED00FD32A /* Pods-ARKitInteraction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitInteraction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitInteraction/Pods-ARKitInteraction.debug.xcconfig"; sourceTree = "<group>"; };
 		B3318C4E2149F90000BA9F1F /* VirtualObjectLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualObjectLoader.h; sourceTree = "<group>"; };
 		B3318C4F2149F90000BA9F1F /* VirtualObjectLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VirtualObjectLoader.m; sourceTree = "<group>"; };
@@ -98,6 +110,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B30C3928214BE9A400F444B4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B30C392C214BE9BB00F444B4 /* MyViewController.h */,
+				B30C392D214BE9BB00F444B4 /* MyViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B30C3929214BE9A400F444B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B30C3932214BE9D600F444B4 /* MyModel.h */,
+				B30C3933214BE9D600F444B4 /* MyModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B30C392A214BE9A400F444B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B30C392F214BE9CB00F444B4 /* MyView.h */,
+				B30C3930214BE9CB00F444B4 /* MyView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B30C392B214BE9A400F444B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B30C3935214BE9E500F444B4 /* MyViewModel.h */,
+				B30C3936214BE9E500F444B4 /* MyViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B3E4C890214408ED008E87CF = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +167,10 @@
 		B3E4C89B214408ED008E87CF /* ARKitInteraction */ = {
 			isa = PBXGroup;
 			children = (
+				B30C3929214BE9A400F444B4 /* Model */,
+				B30C392A214BE9A400F444B4 /* View */,
+				B30C3928214BE9A400F444B4 /* ViewController */,
+				B30C392B214BE9A400F444B4 /* ViewModel */,
 				6E748224214A049A00E66D1F /* MainVC */,
 				B3E4C89C214408ED008E87CF /* AppDelegate.h */,
 				B3E4C89D214408ED008E87CF /* AppDelegate.m */,
@@ -302,13 +354,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30C3934214BE9D600F444B4 /* MyModel.m in Sources */,
+				B30C392E214BE9BB00F444B4 /* MyViewController.m in Sources */,
 				6E74822C214A098600E66D1F /* LoginViewController.m in Sources */,
 				B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */,
 				B3318C502149F90000BA9F1F /* VirtualObjectLoader.m in Sources */,
 				B3F11F602144D65C008CADFC /* PositionTranslation.m in Sources */,
 				B3F11F632144DF03008CADFC /* FocusSquare.m in Sources */,
 				B3E4C8A3214408ED008E87CF /* ViewController.m in Sources */,
+				B30C3937214BE9E500F444B4 /* MyViewModel.m in Sources */,
 				B3E4C8AE214408EE008E87CF /* main.m in Sources */,
+				B30C3931214BE9CB00F444B4 /* MyView.m in Sources */,
 				6E748227214A04C700E66D1F /* MainViewController.m in Sources */,
 				B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */,
 				B3F11F662144FE4A008CADFC /* Segment.m in Sources */,
