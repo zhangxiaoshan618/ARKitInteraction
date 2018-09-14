@@ -11,6 +11,8 @@
 		6E748227214A04C700E66D1F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E748226214A04C700E66D1F /* MainViewController.m */; };
 		6E748229214A05F200E66D1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E748228214A05F200E66D1F /* Media.xcassets */; };
 		6E74822C214A098600E66D1F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E74822B214A098600E66D1F /* LoginViewController.m */; };
+		B3318C502149F90000BA9F1F /* VirtualObjectLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B3318C4F2149F90000BA9F1F /* VirtualObjectLoader.m */; };
+		B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B3318C522149F96400BA9F1F /* VirtualObject.m */; };
 		B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C89D214408ED008E87CF /* AppDelegate.m */; };
 		B3E4C8A0214408ED008E87CF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E4C89F214408ED008E87CF /* art.scnassets */; };
 		B3E4C8A3214408ED008E87CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C8A2214408ED008E87CF /* ViewController.m */; };
@@ -31,6 +33,10 @@
 		6E74822A214A098600E66D1F /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6E74822B214A098600E66D1F /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B3158C12F4F03CCED00FD32A /* Pods-ARKitInteraction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitInteraction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitInteraction/Pods-ARKitInteraction.debug.xcconfig"; sourceTree = "<group>"; };
+		B3318C4E2149F90000BA9F1F /* VirtualObjectLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualObjectLoader.h; sourceTree = "<group>"; };
+		B3318C4F2149F90000BA9F1F /* VirtualObjectLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VirtualObjectLoader.m; sourceTree = "<group>"; };
+		B3318C512149F96400BA9F1F /* VirtualObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualObject.h; sourceTree = "<group>"; };
+		B3318C522149F96400BA9F1F /* VirtualObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VirtualObject.m; sourceTree = "<group>"; };
 		B3E4C899214408ED008E87CF /* ARKitInteraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitInteraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E4C89C214408ED008E87CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3E4C89D214408ED008E87CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -151,6 +157,10 @@
 		B3F11F5C2144D4EA008CADFC /* VirtualObjects */ = {
 			isa = PBXGroup;
 			children = (
+				B3318C4E2149F90000BA9F1F /* VirtualObjectLoader.h */,
+				B3318C4F2149F90000BA9F1F /* VirtualObjectLoader.m */,
+				B3318C512149F96400BA9F1F /* VirtualObject.h */,
+				B3318C522149F96400BA9F1F /* VirtualObject.m */,
 			);
 			path = VirtualObjects;
 			sourceTree = "<group>";
@@ -293,6 +303,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E74822C214A098600E66D1F /* LoginViewController.m in Sources */,
+				B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */,
+				B3318C502149F90000BA9F1F /* VirtualObjectLoader.m in Sources */,
 				B3F11F602144D65C008CADFC /* PositionTranslation.m in Sources */,
 				B3F11F632144DF03008CADFC /* FocusSquare.m in Sources */,
 				B3E4C8A3214408ED008E87CF /* ViewController.m in Sources */,
