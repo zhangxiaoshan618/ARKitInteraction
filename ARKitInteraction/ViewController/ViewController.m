@@ -22,19 +22,14 @@
 #import "Masonry.h"
 #import "EnumHeader.h"
 
-static const CGFloat itemViewHeight = 200;
+
 
 @interface ViewController () <ARSCNViewDelegate,MainFunctionViewDelegate,ChoseItemViewDelegate>
 
-@property (nonatomic, strong) ChoseItemView *itemView;
-@property (nonatomic, strong) MainFunctionView *mainFunctionView;
-@property (nonatomic, strong) ShotedPicView *shotPicVeiw;
-@property (nonatomic, strong) UIImageView *shotImageView;
-@property (nonatomic, strong) UIImage *currentShotImage;
-@property (nonatomic, strong) NSMutableArray *picArray;
-@property (nonatomic, assign) NSInteger picCount;
-@property (nonatomic, copy) NSString *resultStr;
-@property (nonatomic, copy) NSArray<ClassItemModel *> *goodsAllDataSource;
+
+
+// 所有的模型
+@property (nonatomic, strong) NSArray<VirtualObject *> *allVirtualObjects;
 
 @end
 
@@ -62,39 +57,27 @@ static const CGFloat itemViewHeight = 200;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Set the view's delegate
+//    // Set the view's delegate
     self.sceneView.delegate = self;
     self.sceneView.session.delegate = self;
-    
+
     // 设置场景内容。
     [self setupCamera];
     [self.sceneView.scene.rootNode addChildNode:self.focusSquare];
     [self.sceneView setupDirectionalLighting:self.updateQueue];
-    
+
     //连接状态视图控制器回调。
     __weak typeof(self) weakSelf = self;
     self.statusViewController.restartExperienceHandler = ^{
         [weakSelf restartExperience];
     };
-    
+
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showVirtualObjectSelectionViewController)];
     //设置委托以确保仅在场景中没有虚拟对象时使用此手势。
     tapGesture.delegate = self;
     [self.sceneView addGestureRecognizer:tapGesture];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.blurView.hidden = YES;
-    // Create a session configuration
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    ARWorldTrackingConfiguration *configuration = [ARWorldTrackingConfiguration new];
-
-    // Run the view's session
-    [self.sceneView.session runWithConfiguration:configuration];
-    _mainFunctionView = [MainFunctionView showInFatherView:self.view];
-    _mainFunctionView.delegate = self;
-}
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -119,6 +102,7 @@ static const CGFloat itemViewHeight = 200;
     [self.view addSubview:self.blurView];
     [self.view addSubview:self.addObjectButton];
     [self.view addSubview:self.spinner];
+    [self.view addSubview:self.statusViewController.view];
     
     [self.sceneView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.leading.bottom.trailing.equalTo(self.view);
@@ -139,34 +123,18 @@ static const CGFloat itemViewHeight = 200;
         make.bottom.equalTo(self.view).inset(15);
         make.centerX.equalTo(self.view);
     }];
+    
+    [self.statusViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(self.view);
+        make.height.equalTo(@85);
+        make.top.equalTo(self.mas_topLayoutGuideBottom);
+    }];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    if (_itemView) {
-        [self.itemView dismissSelfAndReturnResult];
-        NSMutableArray *selectArray = [NSMutableArray array];
-        for (ClassItemModel *classModel in self.goodsAllDataSource) {
-            for (GoodsItemModel *goodItemModel in classModel.classList) {
-                for (GoodsInfoModel *goodInfo in goodItemModel.goodInfoArray) {
-                    if (goodInfo.isSelect == YES) {
-                        if (goodInfo.goodSizeId) {
-                            [selectArray addObject:goodInfo.goodSizeId];
-                        }
-                    }
-                }
-            }
-        }
-        NSMutableString *resultStr = [NSMutableString string];
-        for (NSString *infoId in selectArray) {
-            if (infoId == selectArray.lastObject) {
-                [resultStr appendString:infoId];
-            } else {
-                [resultStr appendString:[NSString stringWithFormat:@"%@,",infoId]];
-            }
-        }
-        _resultStr = resultStr;
-    }
+    [self virtualObjectSelectionViewController:nil didSelectObject:self.allVirtualObjects.firstObject];
 }
+
 
 #pragma mark - 场景内容设置
 - (void)setupCamera {
@@ -242,106 +210,29 @@ static const CGFloat itemViewHeight = 200;
 }
 
 
-- (void)didClicedListButton {
-    [self loadGoodsAllDataAndShowGoods];
-}
 
-- (void)shotButtonClicked {
-    _shotPicVeiw = [ShotedPicView showInFatherView:self.view];
-    _shotPicVeiw.delegate = self;
-    UIGraphicsBeginImageContext(self.view.bounds.size);
-    //CGContextRef context = UIGraphicsGetCurrentContext();
-    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    //    UIBezierPath *p = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:cornerRadius];
-    //    p.lineWidth = 0.01;
-    //    p.lineCapStyle = kCGLineCapRound;
-    //    p.lineJoinStyle = kCGLineJoinRound;
-    //    CGContextAddPath(context,p.CGPath);
-    //    CGContextClip(context);
-    _currentShotImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    [self showImageView];
-    
-}
+//- (void)loadGoodsAllDataAndShowGoods {
+//    [[LJNetworkService defaultService] getWithUrl:@"http://10.26.9.140:8020/home/goodsall" parameters:nil modelClass:nil completion:^(id data, NSError *error) {
+//        if (!error) {
+//            if ([data isKindOfClass:NSDictionary.class]) {
+//                ClassItemArrayModel *itemModel = [ClassItemArrayModel yy_modelWithDictionary:data];
+//                self.goodsAllDataSource = itemModel.classArray;
+//                self.itemView = [ChoseItemView showChoseItemViewWithFatherView:self.view dataSource:self.goodsAllDataSource];
+//                self.itemView.delegate = self;
+//            }
+//        }
+//    }];
+//}
 
-- (void)clickBackButton {
-    [_shotPicVeiw removeFromSuperview];
-    [self hideImageView];
-}
 
-- (void)clickSaveButton {
-    if (!self.picArray) {
-        _picArray = [NSMutableArray array];
-    }
-    [self.picArray addObject:_currentShotImage];
-    [_shotPicVeiw removeFromSuperview];
-    [self hideImageView];
-}
 
-- (void)clickNextButton {
-    [_shotPicVeiw removeFromSuperview];
-    [self hideImageView];
-    if (_resultStr) {
-        NSDictionary *dic = @{@"price_id":_resultStr};
-        [[LJNetworkService defaultService] postWithUrl:@"http://10.26.9.140:8020/home/orderconfirm" parameters:dic modelClass:nil completion:^(id data, NSError *error) {
-            ConfirmOrderModel *confirmModel = [ConfirmOrderModel yy_modelWithDictionary:data[@"data"]];
-            NSLog(@"%@",confirmModel);
-            ConfirmOrderViewController *confirmVC = [[ConfirmOrderViewController alloc]init];
-            confirmVC.goodsAllDataSource = self.goodsAllDataSource;
-            confirmVC.picArray = self.picArray;
-            confirmVC.confirmModel = confirmModel;
-            [self.navigationController pushViewController:confirmVC animated:YES];
-        }];
-    }
-}
-
-- (void)showImageView {
-    if (!_shotImageView) {
-        _shotImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [Theme screenWidth], [Theme screenHeight]-itemViewHeight)];
-        [self.view addSubview:_shotImageView];
-        [self.view bringSubviewToFront:_shotImageView];
-        _shotImageView.image = self.currentShotImage;
-    }
-    _shotImageView.hidden = NO;
-}
-
-- (void)hideImageView {
-    _shotImageView.hidden = YES;
-}
-
-- (void)loadGoodsAllDataAndShowGoods {
-    [[LJNetworkService defaultService] getWithUrl:@"http://10.26.9.140:8020/home/goodsall" parameters:nil modelClass:nil completion:^(id data, NSError *error) {
-        if (!error) {
-            if ([data isKindOfClass:NSDictionary.class]) {
-                ClassItemArrayModel *itemModel = [ClassItemArrayModel yy_modelWithDictionary:data];
-                self.goodsAllDataSource = itemModel.classArray;
-                self.itemView = [ChoseItemView showChoseItemViewWithFatherView:self.view dataSource:self.goodsAllDataSource];
-                self.itemView.delegate = self;
-            }
-        }
-    }];
-}
-
-//isSelect是选中状态
-- (void)didSelectItemWithGoodType:(EGoogsType)goodType isSelect:(BOOL)isSelect {
-    NSInteger canShow = EGoogsTypeVase|EGoogsTypeTeaCup|EGoogsTypeTeaTable|EGoogsTypePhotoFrame|EGoogsTypeSticker|EGoogsDeskLamp|EGoogsFloorLamp;
-    if (!(canShow&goodType)) {
-        //不符合条件的都当花瓶看待
-        goodType = EGoogsTypeVase;
-    }
-}
 
 #pragma mark - setter/getter
 
 - (StatusViewController *)statusViewController {
     if (!_statusViewController) {
-        NSMutableArray<StatusViewController *> *controllers = [NSMutableArray<StatusViewController *> array];
-        for (UIViewController *controller in self.childViewControllers) {
-            if ([controller isKindOfClass:StatusViewController.class]) {
-                [controllers addObject:(StatusViewController *)controller];
-            }
-        }
-        _statusViewController = controllers.firstObject;
+        _statusViewController = [StatusViewController new];
+        [self addChildViewController:_statusViewController];
     }
     return _statusViewController;
 }
@@ -395,5 +286,27 @@ static const CGFloat itemViewHeight = 200;
     }
     return _sceneView;
 }
+
+- (NSArray<VirtualObject *> *)allVirtualObjects {
+    if (!_allVirtualObjects) {
+        NSArray<VirtualObject *> *array = VirtualObject.availableObjects;
+        _allVirtualObjects = array;
+    }
+    return _allVirtualObjects;
+}
+
++ (NSArray<SCNScene *> *)availableObjects {
+    NSURL *url = [NSBundle.mainBundle URLForResource:@"art.scnassets" withExtension:nil];//pathForResource:@"art.scnassets" ofType:nil];
+    NSDirectoryEnumerator<NSURL *> *files = [[NSFileManager defaultManager] enumeratorAtURL:url includingPropertiesForKeys:nil options:0 errorHandler:nil];
+    
+    NSMutableArray<SCNScene *> *array = [NSMutableArray<SCNScene *> array];
+    [files.allObjects enumerateObjectsUsingBlock:^(NSURL * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj.pathExtension isEqualToString:@"scn"] && ![obj.path containsString:@"lighting"]) {
+            [array addObject:[SCNScene sceneWithURL:obj options:nil error:nil]];
+        }
+    }];
+    return array.copy;
+}
+
 
 @end

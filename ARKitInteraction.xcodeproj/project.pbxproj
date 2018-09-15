@@ -24,7 +24,6 @@
 		6EC5165A214D859200033705 /* MyOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC51659214D859200033705 /* MyOrderModel.m */; };
 		6EC5165D214D85B000033705 /* ConfirmOrderSelectCompanyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5165C214D85B000033705 /* ConfirmOrderSelectCompanyCell.m */; };
 		6EC51660214D85BB00033705 /* TotalPriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5165E214D85BB00033705 /* TotalPriceCell.m */; };
-		B30C3934214BE9D600F444B4 /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3933214BE9D600F444B4 /* MyModel.m */; };
 		B30C3937214BE9E500F444B4 /* MyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3936214BE9E500F444B4 /* MyViewModel.m */; };
 		B30C393A214BEA8300F444B4 /* VirtualObjectARView.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3939214BEA8300F444B4 /* VirtualObjectARView.m */; };
 		B30C393D214C040400F444B4 /* ThresholdPanGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C393C214C040300F444B4 /* ThresholdPanGesture.m */; };
@@ -37,10 +36,26 @@
 		B39853E4214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B39853E3214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m */; };
 		B39853EC214D5D46006D3CFB /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = B39853E9214D5D46006D3CFB /* Theme.m */; };
 		B39853ED214D5D46006D3CFB /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B39853EA214D5D46006D3CFB /* UIColor+Category.m */; };
+		B3985425214DAB7B006D3CFB /* ViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3985416214DAB7A006D3CFB /* ViewController+Actions.swift */; };
+		B3985426214DAB7B006D3CFB /* VirtualObjectInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3985417214DAB7A006D3CFB /* VirtualObjectInteraction.swift */; };
+		B3985427214DAB7B006D3CFB /* VirtualObjectSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3985419214DAB7A006D3CFB /* VirtualObjectSelection.swift */; };
+		B3985428214DAB7B006D3CFB /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B398541A214DAB7A006D3CFB /* StatusViewController.swift */; };
+		B3985429214DAB7B006D3CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B398541B214DAB7A006D3CFB /* ViewController.swift */; };
+		B398542A214DAB7B006D3CFB /* VirtualObjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B398541D214DAB7A006D3CFB /* VirtualObjectLoader.swift */; };
+		B398542B214DAB7B006D3CFB /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B398541E214DAB7A006D3CFB /* VirtualObject.swift */; };
+		B398542C214DAB7B006D3CFB /* ViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B398541F214DAB7A006D3CFB /* ViewController+ARSCNViewDelegate.swift */; };
+		B398542D214DAB7B006D3CFB /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3985420214DAB7B006D3CFB /* ThresholdPanGesture.swift */; };
+		B398542E214DAB7B006D3CFB /* VirtualObjectARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3985421214DAB7B006D3CFB /* VirtualObjectARView.swift */; };
+		B398542F214DAB7B006D3CFB /* ViewController+ObjectSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3985422214DAB7B006D3CFB /* ViewController+ObjectSelection.swift */; };
+		B3985430214DAB7B006D3CFB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3985424214DAB7B006D3CFB /* Utilities.swift */; };
+		B3985434214DACFC006D3CFB /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3985432214DACFB006D3CFB /* FocusSquareSegment.swift */; };
+		B3985435214DACFC006D3CFB /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3985433214DACFB006D3CFB /* FocusSquare.swift */; };
+		B398543A214DADA4006D3CFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3985439214DADA4006D3CFB /* ViewController.m */; };
+		B3BFA86D214DB01400FF33C4 /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BFA86C214DB01400FF33C4 /* OCViewController.m */; };
+		B3BFA86F214DC50F00FF33C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3BFA86E214DC50F00FF33C4 /* Main.storyboard */; };
 		B3C7E4F6214CBB0D002992D6 /* ViewController+ObjectSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7E4F5214CBB0D002992D6 /* ViewController+ObjectSelection.m */; };
 		B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C89D214408ED008E87CF /* AppDelegate.m */; };
 		B3E4C8A0214408ED008E87CF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E4C89F214408ED008E87CF /* art.scnassets */; };
-		B3E4C8A3214408ED008E87CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C8A2214408ED008E87CF /* ViewController.m */; };
 		B3E4C8A8214408EE008E87CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E4C8A7214408EE008E87CF /* Assets.xcassets */; };
 		B3E4C8AB214408EE008E87CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E4C8A9214408EE008E87CF /* LaunchScreen.storyboard */; };
 		B3E4C8AE214408EE008E87CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C8AD214408EE008E87CF /* main.m */; };
@@ -84,8 +99,6 @@
 		6EC5165C214D85B000033705 /* ConfirmOrderSelectCompanyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmOrderSelectCompanyCell.m; sourceTree = "<group>"; };
 		6EC5165E214D85BB00033705 /* TotalPriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalPriceCell.m; sourceTree = "<group>"; };
 		6EC5165F214D85BB00033705 /* TotalPriceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalPriceCell.h; sourceTree = "<group>"; };
-		B30C3932214BE9D600F444B4 /* MyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
-		B30C3933214BE9D600F444B4 /* MyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
 		B30C3935214BE9E500F444B4 /* MyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewModel.h; sourceTree = "<group>"; };
 		B30C3936214BE9E500F444B4 /* MyViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewModel.m; sourceTree = "<group>"; };
 		B30C3938214BEA8300F444B4 /* VirtualObjectARView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualObjectARView.h; sourceTree = "<group>"; };
@@ -111,14 +124,32 @@
 		B39853E9214D5D46006D3CFB /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		B39853EA214D5D46006D3CFB /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
 		B39853EB214D5D46006D3CFB /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
+		B3985413214DAB1A006D3CFB /* ARKitInteraction-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARKitInteraction-Bridging-Header.h"; sourceTree = "<group>"; };
+		B3985416214DAB7A006D3CFB /* ViewController+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Actions.swift"; sourceTree = "<group>"; };
+		B3985417214DAB7A006D3CFB /* VirtualObjectInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectInteraction.swift; sourceTree = "<group>"; };
+		B3985419214DAB7A006D3CFB /* VirtualObjectSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectSelection.swift; sourceTree = "<group>"; };
+		B398541A214DAB7A006D3CFB /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		B398541B214DAB7A006D3CFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B398541D214DAB7A006D3CFB /* VirtualObjectLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectLoader.swift; sourceTree = "<group>"; };
+		B398541E214DAB7A006D3CFB /* VirtualObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		B398541F214DAB7A006D3CFB /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		B3985420214DAB7B006D3CFB /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
+		B3985421214DAB7B006D3CFB /* VirtualObjectARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectARView.swift; sourceTree = "<group>"; };
+		B3985422214DAB7B006D3CFB /* ViewController+ObjectSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ObjectSelection.swift"; sourceTree = "<group>"; };
+		B3985424214DAB7B006D3CFB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		B3985432214DACFB006D3CFB /* FocusSquareSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
+		B3985433214DACFB006D3CFB /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		B3985438214DADA4006D3CFB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B3985439214DADA4006D3CFB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B3BFA86B214DB01400FF33C4 /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		B3BFA86C214DB01400FF33C4 /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		B3BFA86E214DC50F00FF33C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B3C7E4F4214CBB0D002992D6 /* ViewController+ObjectSelection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+ObjectSelection.h"; sourceTree = "<group>"; };
 		B3C7E4F5214CBB0D002992D6 /* ViewController+ObjectSelection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+ObjectSelection.m"; sourceTree = "<group>"; };
 		B3E4C899214408ED008E87CF /* ARKitInteraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitInteraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E4C89C214408ED008E87CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3E4C89D214408ED008E87CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B3E4C89F214408ED008E87CF /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		B3E4C8A1214408ED008E87CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B3E4C8A2214408ED008E87CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B3E4C8A7214408EE008E87CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E4C8AA214408EE008E87CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3E4C8AC214408EE008E87CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,20 +219,22 @@
 		B30C3928214BE9A400F444B4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B3985438214DADA4006D3CFB /* ViewController.h */,
+				B3985439214DADA4006D3CFB /* ViewController.m */,
 				6EC51643214D857000033705 /* MyOrderViewController.h */,
 				6EC51644214D857000033705 /* MyOrderViewController.m */,
 				6EC51645214D857000033705 /* SelectCompanyController.h */,
 				6EC51642214D857000033705 /* SelectCompanyController.m */,
 				6EC515CF214D2D3300033705 /* ConfirmOrderViewController.h */,
 				6EC515D0214D2D3300033705 /* ConfirmOrderViewController.m */,
-				B3E4C8A1214408ED008E87CF /* ViewController.h */,
-				B3E4C8A2214408ED008E87CF /* ViewController.m */,
 				B39853E2214D5263006D3CFB /* ViewController+ARSCNViewDelegate.h */,
 				B39853E3214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m */,
 				B39853DF214D4A86006D3CFB /* ViewController+Actions.h */,
 				B39853E0214D4A86006D3CFB /* ViewController+Actions.m */,
 				B3C7E4F4214CBB0D002992D6 /* ViewController+ObjectSelection.h */,
 				B3C7E4F5214CBB0D002992D6 /* ViewController+ObjectSelection.m */,
+				B3BFA86B214DB01400FF33C4 /* OCViewController.h */,
+				B3BFA86C214DB01400FF33C4 /* OCViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -215,8 +248,6 @@
 				6EC515DF214D2DA900033705 /* ClassItemArrayModel.m */,
 				6EC515E1214D2DA900033705 /* ConfirmOrderModel.h */,
 				6EC515E0214D2DA900033705 /* ConfirmOrderModel.m */,
-				B30C3932214BE9D600F444B4 /* MyModel.h */,
-				B30C3933214BE9D600F444B4 /* MyModel.m */,
 				6E339EEF214D939E007EEB6E /* EnumHeader.h */,
 			);
 			path = Model;
@@ -273,6 +304,61 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		B3985412214DAB01006D3CFB /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				B3BFA86E214DC50F00FF33C4 /* Main.storyboard */,
+				B3985431214DACFB006D3CFB /* Focus Square */,
+				B3985418214DAB7A006D3CFB /* Additional View Controllers */,
+				B3985420214DAB7B006D3CFB /* ThresholdPanGesture.swift */,
+				B3985423214DAB7B006D3CFB /* Utilities */,
+				B398541B214DAB7A006D3CFB /* ViewController.swift */,
+				B3985416214DAB7A006D3CFB /* ViewController+Actions.swift */,
+				B398541F214DAB7A006D3CFB /* ViewController+ARSCNViewDelegate.swift */,
+				B3985422214DAB7B006D3CFB /* ViewController+ObjectSelection.swift */,
+				B398541C214DAB7A006D3CFB /* Virtual Objects */,
+				B3985421214DAB7B006D3CFB /* VirtualObjectARView.swift */,
+				B3985417214DAB7A006D3CFB /* VirtualObjectInteraction.swift */,
+				B3985413214DAB1A006D3CFB /* ARKitInteraction-Bridging-Header.h */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		B3985418214DAB7A006D3CFB /* Additional View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3985419214DAB7A006D3CFB /* VirtualObjectSelection.swift */,
+				B398541A214DAB7A006D3CFB /* StatusViewController.swift */,
+			);
+			path = "Additional View Controllers";
+			sourceTree = "<group>";
+		};
+		B398541C214DAB7A006D3CFB /* Virtual Objects */ = {
+			isa = PBXGroup;
+			children = (
+				B398541D214DAB7A006D3CFB /* VirtualObjectLoader.swift */,
+				B398541E214DAB7A006D3CFB /* VirtualObject.swift */,
+			);
+			path = "Virtual Objects";
+			sourceTree = "<group>";
+		};
+		B3985423214DAB7B006D3CFB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B3985424214DAB7B006D3CFB /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B3985431214DACFB006D3CFB /* Focus Square */ = {
+			isa = PBXGroup;
+			children = (
+				B3985432214DACFB006D3CFB /* FocusSquareSegment.swift */,
+				B3985433214DACFB006D3CFB /* FocusSquare.swift */,
+			);
+			path = "Focus Square";
+			sourceTree = "<group>";
+		};
 		B3E4C890214408ED008E87CF = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +381,7 @@
 		B3E4C89B214408ED008E87CF /* ARKitInteraction */ = {
 			isa = PBXGroup;
 			children = (
+				B3985412214DAB01006D3CFB /* Swift */,
 				B39853E7214D5CE2006D3CFB /* Tool */,
 				B30C3929214BE9A400F444B4 /* Model */,
 				B30C392A214BE9A400F444B4 /* View */,
@@ -392,6 +479,7 @@
 				TargetAttributes = {
 					B3E4C898214408ED008E87CF = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -421,6 +509,7 @@
 				B3E4C8A0214408ED008E87CF /* art.scnassets in Resources */,
 				B3E4C8AB214408EE008E87CF /* LaunchScreen.storyboard in Resources */,
 				B3E4C8A8214408EE008E87CF /* Assets.xcassets in Resources */,
+				B3BFA86F214DC50F00FF33C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,16 +571,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B30C3934214BE9D600F444B4 /* MyModel.m in Sources */,
+				B398542E214DAB7B006D3CFB /* VirtualObjectARView.swift in Sources */,
+				B3985429214DAB7B006D3CFB /* ViewController.swift in Sources */,
 				6EC51646214D857000033705 /* SelectCompanyController.m in Sources */,
 				6EC515E3214D2DA900033705 /* ConfirmOrderModel.m in Sources */,
 				6EC515DB214D2D6D00033705 /* SelectPictureCell.m in Sources */,
+				B398543A214DADA4006D3CFB /* ViewController.m in Sources */,
+				B3BFA86D214DB01400FF33C4 /* OCViewController.m in Sources */,
+				B398542B214DAB7B006D3CFB /* VirtualObject.swift in Sources */,
 				B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */,
 				6EC515DA214D2D6D00033705 /* CanDeletePictureCell.m in Sources */,
 				6EC51657214D858900033705 /* ShotedPicView.m in Sources */,
 				6EC51654214D858900033705 /* ItemSelectCollectionViewCell.m in Sources */,
 				B39853EC214D5D46006D3CFB /* Theme.m in Sources */,
 				6EC51655214D858900033705 /* ClassTypeSelectCell.m in Sources */,
+				B3985427214DAB7B006D3CFB /* VirtualObjectSelection.swift in Sources */,
 				B3598CE1214C87110075A2C6 /* VirtualObjectInteraction.m in Sources */,
 				B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */,
 				B3C7E4F6214CBB0D002992D6 /* ViewController+ObjectSelection.m in Sources */,
@@ -499,25 +593,34 @@
 				6EC5165A214D859200033705 /* MyOrderModel.m in Sources */,
 				6EC51660214D85BB00033705 /* TotalPriceCell.m in Sources */,
 				B3318C502149F90000BA9F1F /* VirtualObjectLoader.m in Sources */,
+				B3985435214DACFC006D3CFB /* FocusSquare.swift in Sources */,
 				6EC515D2214D2D3300033705 /* ConfirmOrderViewController.m in Sources */,
 				B3F11F602144D65C008CADFC /* PositionTranslation.m in Sources */,
 				6EC515E2214D2DA900033705 /* ClassItemArrayModel.m in Sources */,
 				B3F11F632144DF03008CADFC /* FocusSquare.m in Sources */,
-				B3E4C8A3214408ED008E87CF /* ViewController.m in Sources */,
+				B398542D214DAB7B006D3CFB /* ThresholdPanGesture.swift in Sources */,
+				B3985426214DAB7B006D3CFB /* VirtualObjectInteraction.swift in Sources */,
 				B30C3937214BE9E500F444B4 /* MyViewModel.m in Sources */,
 				B3E4C8AE214408EE008E87CF /* main.m in Sources */,
 				B30C393D214C040400F444B4 /* ThresholdPanGesture.m in Sources */,
+				B398542A214DAB7B006D3CFB /* VirtualObjectLoader.swift in Sources */,
+				B398542F214DAB7B006D3CFB /* ViewController+ObjectSelection.swift in Sources */,
+				B3985428214DAB7B006D3CFB /* StatusViewController.swift in Sources */,
 				6EC51653214D858900033705 /* ChoseItemView.m in Sources */,
 				6EC515DD214D2D6D00033705 /* GoodsIntroCell.m in Sources */,
+				B3985425214DAB7B006D3CFB /* ViewController+Actions.swift in Sources */,
 				6EC51647214D857000033705 /* MyOrderViewController.m in Sources */,
 				6EC51656214D858900033705 /* MainFunctionView.m in Sources */,
 				B30C393A214BEA8300F444B4 /* VirtualObjectARView.m in Sources */,
 				B39853ED214D5D46006D3CFB /* UIColor+Category.m in Sources */,
 				B33ABDAE214D13D500A65F04 /* VirtualObjectSelectionViewController.m in Sources */,
+				B398542C214DAB7B006D3CFB /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				B39853E4214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m in Sources */,
 				B397CEC6214CC60700C3ADD7 /* StatusViewController.m in Sources */,
+				B3985434214DACFC006D3CFB /* FocusSquareSegment.swift in Sources */,
 				B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */,
 				B3F11F662144FE4A008CADFC /* Segment.m in Sources */,
+				B3985430214DAB7B006D3CFB /* Utilities.swift in Sources */,
 				6EC5165D214D85B000033705 /* ConfirmOrderSelectCompanyCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,9 +758,10 @@
 			baseConfigurationReference = B3158C12F4F03CCED00FD32A /* Pods-ARKitInteraction.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XW5558TH45;
+				DEVELOPMENT_TEAM = AHJHGYFA8S;
 				INFOPLIST_FILE = ARKitInteraction/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -667,6 +771,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lianjia.ARKitInteraction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARKitInteraction/Swift/ARKitInteraction-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -676,9 +783,10 @@
 			baseConfigurationReference = 1B4158F8CF176958642A6AD7 /* Pods-ARKitInteraction.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XW5558TH45;
+				DEVELOPMENT_TEAM = AHJHGYFA8S;
 				INFOPLIST_FILE = ARKitInteraction/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -688,6 +796,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lianjia.ARKitInteraction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARKitInteraction/Swift/ARKitInteraction-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

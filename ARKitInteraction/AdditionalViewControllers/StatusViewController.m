@@ -236,7 +236,7 @@
 - (UILabel *)messageLabel {
     if (!_messageLabel) {
         UILabel *label = [UILabel new];
-        label.textColor = [UIColor darkGrayColor];
+        label.textColor = [UIColor yellowColor];
         _messageLabel = label;
     }
     return _messageLabel;

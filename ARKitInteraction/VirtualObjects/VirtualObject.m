@@ -191,13 +191,13 @@
 #pragma mark - Class Properties and Methods
 
 + (NSArray<VirtualObject *> *)availableObjects {
-    NSString *modelsURL = [NSBundle.mainBundle pathForResource:@"Models.scnassets" ofType:nil];
-    NSArray<NSString *> *fileEnumerator = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:modelsURL error:nil];
+    NSURL *url = [NSBundle.mainBundle URLForResource:@"art.scnassets" withExtension:nil];//pathForResource:@"art.scnassets" ofType:nil];
+    NSDirectoryEnumerator<NSURL *> *files = [[NSFileManager defaultManager] enumeratorAtURL:url includingPropertiesForKeys:nil options:0 errorHandler:nil];
+    
     NSMutableArray<VirtualObject *> *array = [NSMutableArray<VirtualObject *> array];
-    [fileEnumerator enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSURL *url = [NSURL URLWithString:obj];
-        if ([url.pathExtension isEqualToString:@"scn"] && ![url.path containsString:@"lighting"]) {
-            [array addObject:[VirtualObject referenceNodeWithURL:url]];
+    [files.allObjects enumerateObjectsUsingBlock:^(NSURL * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj.pathExtension isEqualToString:@"scn"] && ![obj.path containsString:@"lighting"]) {
+            [array addObject:[VirtualObject referenceNodeWithURL:obj]];
         }
     }];
     return array.copy;

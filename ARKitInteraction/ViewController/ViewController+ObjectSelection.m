@@ -39,6 +39,11 @@
 #pragma mark - VirtualObjectSelectionViewControllerDelegate
 
 - (void)virtualObjectSelectionViewController:(VirtualObjectSelectionViewController *)selectionViewController didSelectObject:(VirtualObject *)selectObject {
+
+    if (selectObject == nil) {
+        return;
+    }
+    
     [self.virtualObjectLoader loadVirtualObject:selectObject loadedHandler:^(VirtualObject *loadedObject) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self hideObjectLoadingUI];
@@ -48,9 +53,15 @@
 }
 
 - (void)virtualObjectSelectionViewController:(VirtualObjectSelectionViewController *)selectionViewController didDeselectObject:(VirtualObject *)deselectObject {
+    
+    if (deselectObject == nil) {
+        return;
+    }
+    
     if (![self.virtualObjectLoader.loadedObjects containsObject:deselectObject]) {
         return;
     }
+    
     NSInteger objectIndex = [self.virtualObjectLoader.loadedObjects indexOfObject:deselectObject];
     
     [self.virtualObjectLoader removeVirtualObjectAt:objectIndex];

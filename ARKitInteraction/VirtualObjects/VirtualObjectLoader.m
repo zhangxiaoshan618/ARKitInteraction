@@ -40,26 +40,26 @@
     self.isLoading = YES;
     [self.loadedObjects addObject:object];
     
+    [object reset];
+    [object load];
+    
+    self.isLoading = NO;
+    loadedHandler(object);
+    
     //异步加载内容。
-    dispatch_queue_t queue = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0);
-    dispatch_async(queue, ^{
-        [object reset];
-        [object load];
-        
-        self.isLoading = NO;
-        loadedHandler(object);
-    });
+//    dispatch_queue_t queue = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0);
+//    dispatch_async(queue, ^{
+//        [object reset];
+//        [object load];
+//        
+//        self.isLoading = NO;
+//        loadedHandler(object);
+//    });
 }
 
 #pragma mark - 移除对象
 
 - (void)removeAllVirtualObjects {
-    //反转索引，这样我们就不会在删除对象时践踏索引。
-    // TODO: 排序
-//    for (NSInteger index in [self.loadedObjects indi]) {
-//        <#statements#>
-//    }
-    
     for (VirtualObject *object in self.loadedObjects) {
         [object removeFromParentNode];
     }

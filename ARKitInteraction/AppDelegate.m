@@ -10,7 +10,7 @@
 #import "LJNetworkService.h"
 #import "AFNetworking.h"
 #import "ConfirmOrderViewController.h"
-#import "ViewController.h"
+#import "OCViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,8 +23,7 @@
     [UIApplication sharedApplication].delegate.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [UIApplication sharedApplication].delegate.window.backgroundColor = [UIColor whiteColor];
     [[UIApplication sharedApplication].delegate.window makeKeyAndVisible];
-                        
-    ViewController *vc = [ViewController new];
+    OCViewController *vc = [OCViewController new];
     UINavigationController * navVC = [[UINavigationController alloc]initWithRootViewController:vc];
     [UIApplication sharedApplication].delegate.window.rootViewController = navVC;
     return YES;

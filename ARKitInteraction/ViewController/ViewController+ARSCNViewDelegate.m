@@ -15,13 +15,13 @@
 
 - (void)renderer:(id<SCNSceneRenderer>)renderer updateAtTime:(NSTimeInterval)time {
     
-    BOOL isAnyObjectInView = NO;
-    for (VirtualObject *object in self.virtualObjectLoader.loadedObjects) {
-        if ([self.sceneView isNodeInsideFrustum:object withPointOfView:self.sceneView.pointOfView]) {
-            isAnyObjectInView = YES;
-            break;
-        }
-    }
+    BOOL isAnyObjectInView = YES;
+//    for (VirtualObject *object in self.virtualObjectLoader.loadedObjects) {
+//        if ([self.sceneView isNodeInsideFrustum:object withPointOfView:self.sceneView.pointOfView]) {
+//            isAnyObjectInView = YES;
+//            break;
+//        }
+//    }
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.virtualObjectInteraction updateObjectToCurrentTrackingPosition];
@@ -29,9 +29,9 @@
     });
     
     //如果对象选择菜单已打开，请更新项目的可用性
-    if (self.objectsViewController != nil) {
-        [self.objectsViewController updateObjectAvailabilityFor:self.focusSquare.currentPlaneAnchor];
-    }
+//    if (self.objectsViewController != nil) {
+//        [self.objectsViewController updateObjectAvailabilityFor:self.focusSquare.currentPlaneAnchor];
+//    }
     
     //如果启用了光估计，请更新方向灯的强度
     ARLightEstimate *lightEstimate = self.session.currentFrame.lightEstimate;
@@ -50,9 +50,9 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.statusViewController cancelScheduledMessageFor:MessageTypePlaneEstimation];
         [self.statusViewController showMessage:@"表面检测" autoHide:YES];
-        if (self.virtualObjectLoader.loadedObjects.count == 0) {
-            [self.statusViewController scheduleMessage:@"点击 + 放置一个对象" inSeconds:7.5 messageType:MessageTypeContentPlacement];
-        }
+//        if (self.virtualObjectLoader.loadedObjects.count == 0) {
+//            [self.statusViewController scheduleMessage:@"点击 + 放置一个对象" inSeconds:7.5 messageType:MessageTypeContentPlacement];
+//        }
     });
     
     dispatch_async(self.updateQueue, ^{

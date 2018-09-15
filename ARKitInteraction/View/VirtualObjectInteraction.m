@@ -22,7 +22,7 @@
 @property (nonatomic, strong) VirtualObject *trackedObject;
 
 ///用于在`updateObjectToCurrentTrackingPosition（）`中更新`trackedObject`位置的跟踪屏幕位置。
-@property (nonatomic, assign) CGPoint currentTrackingPosition;
+@property (nonatomic, assign) CGPoint *currentTrackingPosition;
 
 @end
 
@@ -65,10 +65,17 @@
         case UIGestureRecognizerStateChanged: {
             if (gesture.isThresholdExceeded && self.trackedObject != nil) {
                 CGPoint translation = [gesture translationInView:self.sceneView];
-                CGPoint currentPosition = self.currentTrackingPosition;
                 
+                CGPoint currentPosition;
+                if (self.currentTrackingPosition != nil) {
+                    currentPosition = *(self.currentTrackingPosition);
+                }else {
+                    SCNVector3 vector = [self.sceneView projectPoint:self.trackedObject.position];
+                    currentPosition = CGPointMake(vector.x, vector.y);
+                }
                 //`currentTrackingPosition`用于更新`updateObjectToCurrentTrackingPosition（）`中的`selectedObject`。
-                self.currentTrackingPosition = CGPointMake(currentPosition.x + translation.x, currentPosition.y + translation.y);
+                CGPoint point = CGPointMake(currentPosition.x + translation.x, currentPosition.y + translation.y);
+                self.currentTrackingPosition = &point;
                 [gesture setTranslation:CGPointZero inView:self.sceneView];
             } //忽略对平移手势的更改，直到超出置换阈值。
         } break;
@@ -80,7 +87,7 @@
             
         default:
             // Clear the current position tracking.
-            self.currentTrackingPosition = CGPointZero;
+            self.currentTrackingPosition = nil;
             self.trackedObject = nil;
             break;
     }
@@ -93,11 +100,11 @@
  - 标签：updateObjectToCurrentTrackingPosition
  */
 - (void)updateObjectToCurrentTrackingPosition {
-    if (self.trackedObject == nil || (self.currentTrackingPosition.x == 0 && self.currentTrackingPosition.y == 0)) {
+    if (self.trackedObject == nil || self.currentTrackingPosition == nil) {
         return;
     }
     
-    [self translateWith:self.trackedObject basedOn:self.currentTrackingPosition infinitePlane:self.translateAssumingInfinitePlane allowAnimation:YES];
+    [self translateWith:self.trackedObject basedOn:*(self.currentTrackingPosition) infinitePlane:self.translateAssumingInfinitePlane allowAnimation:YES];
 }
 
 - (void)didRotateWith:(UIRotationGestureRecognizer *)gesture {

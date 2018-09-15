@@ -16,8 +16,11 @@
 
 
 @interface ViewController (ObjectSelection) <VirtualObjectSelectionViewControllerDelegate>
-
-
+- (void)placeVirtualObject:(VirtualObject *)virtualObject;
+- (void)displayObjectLoadingUI;
+- (void)hideObjectLoadingUI;
+- (void)virtualObjectSelectionViewController:(VirtualObjectSelectionViewController *)selectionViewController didSelectObject:(VirtualObject *)selectObject;
+- (void)virtualObjectSelectionViewController:(VirtualObjectSelectionViewController *)selectionViewController didDeselectObject:(VirtualObject *)deselectObject;
 
 @end
 
