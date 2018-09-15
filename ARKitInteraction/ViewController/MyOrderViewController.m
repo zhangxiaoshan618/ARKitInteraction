@@ -10,7 +10,6 @@
 #import "GoodsIntroCell.h"
 #import "Masonry.h"
 #import "UIColor+Category.h"
-#import "ChoseItemView.h"
 #import "LJNetworkService.h"
 #import "YYModel.h"
 #import "ConfirmOrderModel.h"

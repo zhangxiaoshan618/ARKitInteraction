@@ -42,7 +42,7 @@
     _selectImage.image = [UIImage imageNamed:@"AssetsPickerChecked"];
     [self addSubview:_selectImage];
     [_selectImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(@-30);
+        make.right.equalTo(@-10);
         make.top.equalTo(@0);
         make.width.height.equalTo(@15);
     }];

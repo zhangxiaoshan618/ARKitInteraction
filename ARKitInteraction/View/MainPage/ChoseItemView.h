@@ -7,18 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EnumHeader.h"
 @class GoodsItemModel;
 @class ClassItemModel;
 
 @protocol ChoseItemViewDelegate <NSObject>
 
-- (void)didSelectItemWithGoodModel:(GoodsItemModel *)goodModel;
+- (void)didSelectItemWithGoodType:(EGoogsType)goodType;
 
 @end
 
 @interface ChoseItemView : UIView
 
 + (ChoseItemView *)showChoseItemViewWithFatherView:(UIView *)fatherView dataSource:(NSArray<ClassItemModel *> *)dataSource;
+@property (nonatomic, weak) id<ChoseItemViewDelegate> delegate;
 - (void)dismissSelfAndReturnResult;
 
 @end

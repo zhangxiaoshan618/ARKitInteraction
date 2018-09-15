@@ -20,10 +20,11 @@
 #import "ViewController+ObjectSelection.h"
 #import "ViewController+ARSCNViewDelegate.h"
 #import "Masonry.h"
+#import "EnumHeader.h"
 
 static const CGFloat itemViewHeight = 200;
 
-@interface ViewController () <ARSCNViewDelegate,MainFunctionViewDelegate>
+@interface ViewController () <ARSCNViewDelegate,MainFunctionViewDelegate,ChoseItemViewDelegate>
 
 @property (nonatomic, strong) ChoseItemView *itemView;
 @property (nonatomic, strong) MainFunctionView *mainFunctionView;
@@ -315,9 +316,18 @@ static const CGFloat itemViewHeight = 200;
                 ClassItemArrayModel *itemModel = [ClassItemArrayModel yy_modelWithDictionary:data];
                 self.goodsAllDataSource = itemModel.classArray;
                 self.itemView = [ChoseItemView showChoseItemViewWithFatherView:self.view dataSource:self.goodsAllDataSource];
+                self.itemView.delegate = self;
             }
         }
     }];
+}
+
+- (void)didSelectItemWithGoodType:(EGoogsType)goodType; {
+    NSInteger canShow = EGoogsTypeVase|EGoogsTypeTeaCup|EGoogsTypeTeaTable|EGoogsTypePhotoFrame|EGoogsTypeSticker|EGoogsDeskLamp|EGoogsFloorLamp;
+    if (!(canShow&goodType)) {
+        //不符合条件的都当花瓶看待
+        goodType = EGoogsTypeVase;
+    }
 }
 
 #pragma mark - setter/getter

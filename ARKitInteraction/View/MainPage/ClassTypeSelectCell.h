@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "ClassItemArrayModel.h"
+#import "EnumHeader.h"
+
+@protocol ClassTypeSelectCellDelegate <NSObject>
+
+- (void)didSelectItemWithGoodType:(EGoogsType)goodType;
+
+@end
 
 @interface ClassTypeSelectCell : UITableViewCell
 
 @property (nonatomic, strong) GoodsItemModel *model;
+@property (nonatomic, assign) NSInteger position;
+@property (nonatomic, weak) id<ClassTypeSelectCellDelegate> delegate;
 
 @end

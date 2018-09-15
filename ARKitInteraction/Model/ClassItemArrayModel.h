@@ -25,7 +25,7 @@
 @interface GoodsItemModel : NSObject
 @property (nonatomic, copy) NSString *goodUrl;
 @property (nonatomic, copy) NSString *goodName;
-@property (nonatomic, assign) NSString *goodId;
+@property (nonatomic, assign) NSInteger goodId;
 @property (nonatomic, copy) NSArray<GoodsInfoModel *> *goodInfoArray;
 
 @end

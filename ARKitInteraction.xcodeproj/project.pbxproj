@@ -51,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		1B4158F8CF176958642A6AD7 /* Pods-ARKitInteraction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitInteraction.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitInteraction/Pods-ARKitInteraction.release.xcconfig"; sourceTree = "<group>"; };
+		6E339EEF214D939E007EEB6E /* EnumHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumHeader.h; sourceTree = "<group>"; };
 		6EC515CF214D2D3300033705 /* ConfirmOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmOrderViewController.h; sourceTree = "<group>"; };
 		6EC515D0214D2D3300033705 /* ConfirmOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmOrderViewController.m; sourceTree = "<group>"; };
 		6EC515D3214D2D6D00033705 /* SelectPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPictureCell.h; sourceTree = "<group>"; };
@@ -162,16 +163,16 @@
 		6EC51648214D858900033705 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				6EC51649214D858900033705 /* MainFunctionView.h */,
-				6EC5164A214D858900033705 /* ChoseItemView.m */,
-				6EC5164B214D858900033705 /* ItemSelectCollectionViewCell.m */,
 				6EC5164C214D858900033705 /* ShotedPicView.h */,
-				6EC5164D214D858900033705 /* ClassTypeSelectCell.m */,
+				6EC51651214D858900033705 /* ShotedPicView.m */,
 				6EC5164E214D858900033705 /* ChoseItemView.h */,
+				6EC5164A214D858900033705 /* ChoseItemView.m */,
+				6EC51649214D858900033705 /* MainFunctionView.h */,
 				6EC5164F214D858900033705 /* MainFunctionView.m */,
 				6EC51650214D858900033705 /* ItemSelectCollectionViewCell.h */,
-				6EC51651214D858900033705 /* ShotedPicView.m */,
+				6EC5164B214D858900033705 /* ItemSelectCollectionViewCell.m */,
 				6EC51652214D858900033705 /* ClassTypeSelectCell.h */,
+				6EC5164D214D858900033705 /* ClassTypeSelectCell.m */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -216,6 +217,7 @@
 				6EC515E0214D2DA900033705 /* ConfirmOrderModel.m */,
 				B30C3932214BE9D600F444B4 /* MyModel.h */,
 				B30C3933214BE9D600F444B4 /* MyModel.m */,
+				6E339EEF214D939E007EEB6E /* EnumHeader.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -91,6 +91,10 @@
         index ++;
     }
     [collectionView reloadData];
+    
+    if ([self.delegate respondsToSelector:@selector(didSelectItemWithGoodType:)]) {
+        [self.delegate didSelectItemWithGoodType:self.position];
+    }
 }
 
 @end

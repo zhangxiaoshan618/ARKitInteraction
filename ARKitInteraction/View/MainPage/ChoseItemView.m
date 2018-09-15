@@ -19,7 +19,7 @@
 
 static const CGFloat itemViewHeight = 200;
 
-@interface ChoseItemView()<UITableViewDelegate,UITableViewDataSource>
+@interface ChoseItemView()<UITableViewDelegate,UITableViewDataSource,ClassTypeSelectCellDelegate>
 @property (nonatomic, strong) NSMutableArray *headViewBtnArray;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIView *headerView;
@@ -121,8 +121,10 @@ static const CGFloat itemViewHeight = 200;
 #pragma mark - tabelviewDelegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ClassTypeSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ClassTypeSelectCell" forIndexPath:indexPath];
+    cell.delegate = self;
     ClassItemModel *classItemModel = self.dataSource[self.classType];
     GoodsItemModel *goodItemModel = (GoodsItemModel *)(classItemModel.classList[indexPath.row]);
+     cell.position = goodItemModel.goodId;
     [cell setModel:goodItemModel];
     return cell;
 }
@@ -133,6 +135,12 @@ static const CGFloat itemViewHeight = 200;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataSource[self.classType].classList.count;
+}
+
+- (void)didSelectItemWithGoodType:(EGoogsType)goodType {
+    if ([self.delegate respondsToSelector:@selector(didSelectItemWithGoodType:)]) {
+        [self.delegate didSelectItemWithGoodType:goodType];
+    }
 }
 
 @end
