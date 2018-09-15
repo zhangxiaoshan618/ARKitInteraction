@@ -322,7 +322,8 @@ static const CGFloat itemViewHeight = 200;
     }];
 }
 
-- (void)didSelectItemWithGoodType:(EGoogsType)goodType; {
+//isSelect是选中状态
+- (void)didSelectItemWithGoodType:(EGoogsType)goodType isSelect:(BOOL)isSelect {
     NSInteger canShow = EGoogsTypeVase|EGoogsTypeTeaCup|EGoogsTypeTeaTable|EGoogsTypePhotoFrame|EGoogsTypeSticker|EGoogsDeskLamp|EGoogsFloorLamp;
     if (!(canShow&goodType)) {
         //不符合条件的都当花瓶看待

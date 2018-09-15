@@ -85,16 +85,15 @@
     for (GoodsInfoModel * model in self.model.goodInfoArray) {
         if (index == indexPath.row) {
             model.isSelect = !model.isSelect;
+            if ([self.delegate respondsToSelector:@selector(didSelectItemWithGoodType:isSelect:)]) {
+                [self.delegate didSelectItemWithGoodType:self.position isSelect:model.isSelect];
+            }
         } else {
             model.isSelect = NO;
         }
         index ++;
     }
     [collectionView reloadData];
-    
-    if ([self.delegate respondsToSelector:@selector(didSelectItemWithGoodType:)]) {
-        [self.delegate didSelectItemWithGoodType:self.position];
-    }
 }
 
 @end

@@ -137,9 +137,9 @@ static const CGFloat itemViewHeight = 200;
     return self.dataSource[self.classType].classList.count;
 }
 
-- (void)didSelectItemWithGoodType:(EGoogsType)goodType {
-    if ([self.delegate respondsToSelector:@selector(didSelectItemWithGoodType:)]) {
-        [self.delegate didSelectItemWithGoodType:goodType];
+- (void)didSelectItemWithGoodType:(EGoogsType)goodType isSelect:(BOOL)isSelect {
+    if ([self.delegate respondsToSelector:@selector(didSelectItemWithGoodType:isSelect:)]) {
+        [self.delegate didSelectItemWithGoodType:goodType isSelect:isSelect];
     }
 }
 

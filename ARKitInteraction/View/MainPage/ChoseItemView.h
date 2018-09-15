@@ -13,7 +13,7 @@
 
 @protocol ChoseItemViewDelegate <NSObject>
 
-- (void)didSelectItemWithGoodType:(EGoogsType)goodType;
+- (void)didSelectItemWithGoodType:(EGoogsType)goodType isSelect:(BOOL)isSelect;
 
 @end
 
