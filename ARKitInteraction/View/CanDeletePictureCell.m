@@ -8,6 +8,7 @@
 
 #import "CanDeletePictureCell.h"
 #import "Masonry.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface CanDeletePictureCell()
 @property (nonatomic, strong) UIImageView *mainImage;
@@ -38,6 +39,7 @@
     
     //删除图标
     _deleteImage = [[UIImageView alloc]initWithFrame:CGRectZero];
+    _deleteImage.image = [UIImage imageNamed:@"close"];
     [self addSubview:_deleteImage];
     [_deleteImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(@-30);
@@ -46,6 +48,7 @@
     
     //删除按钮
     _deleteControl = [[UIControl alloc]initWithFrame:CGRectZero];
+    [_deleteControl addTarget:self action:@selector(clickDeleteButton) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_deleteControl];
     [_deleteControl mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(self.deleteImage).offset(-10);
@@ -59,13 +62,17 @@
 
 - (void)clickDeleteButton {
     if ([self.delegate respondsToSelector:@selector(didDeletePictureCell:)]) {
-        //[self.delegate didDeletePictureCell:self.index];
+        [self.delegate didDeletePictureCell:self.index];
     }
 }
 
 - (void)canDelete:(BOOL)canDelete {
     _deleteImage.hidden = !canDelete;
     _deleteControl.hidden = !canDelete;
+}
+
+- (void)setImageUrl:(NSString *)imageUrl {
+    [_mainImage sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"goodImage"]];
 }
 
 

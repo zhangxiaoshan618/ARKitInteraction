@@ -10,10 +10,17 @@
 @class ConfirmOrderModel;
 @class ClassItemModel;
 
+@protocol ConfirmOrderViewControllerDelegate <NSObject>
+
+- (void)finishDelePic:(NSArray<UIImage *>*)imageArray;
+
+@end
+
 @interface ConfirmOrderViewController : UIViewController
 
 @property (nonatomic, strong) ConfirmOrderModel *confirmModel;
 @property (nonatomic, copy) NSArray <UIImage *>*picArray;
 @property (nonatomic, copy) NSArray<ClassItemModel *> *goodsAllDataSource;
+@property (nonatomic, weak) id <ConfirmOrderViewControllerDelegate> delegate;
 
 @end

@@ -34,7 +34,7 @@ static const CGFloat itemViewHeight = 200;
 - (void)initUI {
     //左侧的清单按钮
     self.backgroundColor = [UIColor whiteColor];
-    _backButton = [self creatButtonWithText:@"返回" imageName:@"list" action:@selector(clickBackButton)];
+    _backButton = [self creatButtonWithText:@"返回" imageName:@"back" action:@selector(clickBackButton)];
     [self addSubview:_backButton];
     [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@30);
@@ -43,18 +43,19 @@ static const CGFloat itemViewHeight = 200;
     }];
     
     _saveButton = [[UIButton alloc]initWithFrame:CGRectZero];
-    _saveButton.layer.cornerRadius = 40;
+    _saveButton.layer.cornerRadius = 50;
+    [_saveButton setImage:[UIImage imageNamed:@"save"] forState:UIControlStateNormal];
     _saveButton.backgroundColor = [UIColor colorWithHex:0xf5f5f5];
     [_saveButton addTarget:self action:@selector(clickSaveButton) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_saveButton];
     [_saveButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(@0);
-        make.width.height.equalTo(@80);
+        make.width.height.equalTo(@100);
         make.centerY.equalTo(@0);
     }];
     
     //右侧的我的按钮
-    _nextButton = [self creatButtonWithText:@"下一步" imageName:@"mine" action:@selector(clickNextButton)];
+    _nextButton = [self creatButtonWithText:@"下一步" imageName:@"next" action:@selector(clickNextButton)];
     [self addSubview:_nextButton];
     [_nextButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(@-30);

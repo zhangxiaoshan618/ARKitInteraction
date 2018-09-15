@@ -12,6 +12,7 @@
 
 - (void)didClicedListButton;
 - (void)shotButtonClicked;
+- (void)mineButtonClicked;
 
 @end
 

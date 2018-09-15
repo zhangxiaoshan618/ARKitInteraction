@@ -1,5 +1,5 @@
 //
-//  PaymentOrderViewController.h
+//  TotalPriceCell.h
 //  ARKitInteraction
 //
 //  Created by Yi Li on 2018/9/15.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PaymentOrderViewController : UIViewController
+@interface TotalPriceCell : UITableViewCell
+
+- (void)setTitleText:(NSString *)titleText priceText:(NSString *)priceText;
 
 @end

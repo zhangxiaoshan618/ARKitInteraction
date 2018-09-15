@@ -44,6 +44,7 @@
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
+    self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -76,12 +77,19 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(100, 50);
+    return CGSizeMake(80, 45);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    GoodsInfoModel * model= self.model.goodInfoArray[indexPath.row];
-    model.isSelect = !model.isSelect;
+    NSInteger index = 0;
+    for (GoodsInfoModel * model in self.model.goodInfoArray) {
+        if (index == indexPath.row) {
+            model.isSelect = !model.isSelect;
+        } else {
+            model.isSelect = NO;
+        }
+        index ++;
+    }
     [collectionView reloadData];
 }
 

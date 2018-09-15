@@ -48,13 +48,31 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CanDeletePictureCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CanDeletePictureCell" forIndexPath:indexPath];
-    cell.index = indexPath.row;
-    cell.picImage = self.imageArray[indexPath.row];
+    cell.delegate = self;
+    if (self.imageArray.count) {
+        if (self.imageArray.count<=1) {
+            [cell canDelete:NO];
+        } else {
+            [cell canDelete:YES];
+        }
+        cell.index = indexPath.row;
+        
+        cell.picImage = self.imageArray[indexPath.row];
+    } else {
+        [cell canDelete:NO];
+        cell.index = indexPath.row;
+        cell.imageUrl = self.imageUrlArray[indexPath.row];
+    }
     return cell;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.imageArray.count;
+    if (self.imageArray.count) {
+        return self.imageArray.count;
+    } else {
+        return self.imageUrlArray.count;
+    }
+    
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -70,8 +88,15 @@
     [self.collectionView reloadData];
 }
 
+- (void)setImageUrlArray:(NSArray<NSString *> *)imageUrlArray {
+    _imageUrlArray = imageUrlArray;
+}
+
 - (void)didDeletePictureCell:(NSInteger)index {
-    
+    NSMutableArray *imgArray = [NSMutableArray arrayWithArray:self.imageArray];
+    [imgArray removeObjectAtIndex:index];
+    self.imageArray = imgArray;
+    [self.collectionView reloadData];
 }
 
 @end

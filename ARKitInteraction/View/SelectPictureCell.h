@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol SelectPictureCellDelegate <NSObject>
+
+- (void)finishDelePic:(NSArray<UIImage *>*)imageArray;
+
+@end
 
 @interface SelectPictureCell : UITableViewCell
 
 @property (nonatomic, copy) NSArray <UIImage *> *imageArray;
+@property (nonatomic, weak) id<SelectPictureCellDelegate> delegate;
+@property (nonatomic, copy) NSArray <NSString *> *imageUrlArray;
 
 @end

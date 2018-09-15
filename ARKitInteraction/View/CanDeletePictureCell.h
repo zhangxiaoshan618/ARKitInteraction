@@ -15,6 +15,7 @@
 @interface CanDeletePictureCell : UICollectionViewCell
 
 @property (nonatomic, strong) UIImage *picImage;
+@property (nonatomic, copy) NSString *imageUrl;
 
 - (void)canDelete:(BOOL)canDelete;
 @property (nonatomic, weak) id<CanDeletePictureCellDelegate> delegate;

@@ -42,13 +42,13 @@ static const CGFloat itemViewHeight = 200;
     }];
     
     _screenShotButton = [[UIButton alloc]initWithFrame:CGRectZero];
-    _screenShotButton.layer.cornerRadius = 40;
-    _screenShotButton.backgroundColor = [UIColor colorWithHex:0xf5f5f5];
+    _screenShotButton.layer.cornerRadius = 50;
+    _screenShotButton.backgroundColor = [UIColor colorWithHex:0x858585];
     [_screenShotButton addTarget:self action:@selector(shotButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_screenShotButton];
     [_screenShotButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(@0);
-        make.width.height.equalTo(@80);
+        make.width.height.equalTo(@100);
         make.centerY.equalTo(@0);
     }];
     
@@ -70,7 +70,9 @@ static const CGFloat itemViewHeight = 200;
 }
 
 - (void)mineButtonClicked {
-    
+    if ([self.delegate respondsToSelector:@selector(mineButtonClicked)]) {
+        [self.delegate mineButtonClicked];
+    }
 }
 
 - (void)shotButtonClicked {
@@ -110,6 +112,5 @@ static const CGFloat itemViewHeight = 200;
     }];
     return button;
 }
-
 
 @end

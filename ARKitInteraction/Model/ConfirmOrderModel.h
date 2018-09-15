@@ -15,7 +15,7 @@
 
 @property (nonatomic, copy) NSArray <ItemInfoModel *> *itemInfoArray;
 @property (nonatomic, copy) NSString *orderId;
-@property (nonatomic, assign) CGFloat totalSum;
+@property (nonatomic, copy) NSString *totalSum;
 @property (nonatomic, copy) NSArray <CompanyInfoModel *> *companyArray;
 
 @end
