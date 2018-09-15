@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "VirtualObjectARView.h"
 
 @class VirtualObject;
 
@@ -19,7 +20,11 @@
  */
 @property (nonatomic, strong) VirtualObject *selectedObject;
 
+- (instancetype)initWithSceneView:(VirtualObjectARView *)sceneView;
+
 - (void)translateWith:(VirtualObject *)object basedOn:(CGPoint)screenPos infinitePlane:(BOOL)infinitePlane allowAnimation:(BOOL)allowAnimation;
+
+- (void)updateObjectToCurrentTrackingPosition;
 
 @end
 

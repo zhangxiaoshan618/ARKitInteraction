@@ -23,9 +23,8 @@
     [UIApplication sharedApplication].delegate.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [UIApplication sharedApplication].delegate.window.backgroundColor = [UIColor whiteColor];
     [[UIApplication sharedApplication].delegate.window makeKeyAndVisible];
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
                         
-    ViewController *vc = [sb instantiateInitialViewController];
+    ViewController *vc = [ViewController new];
     UINavigationController * navVC = [[UINavigationController alloc]initWithRootViewController:vc];
     [UIApplication sharedApplication].delegate.window.rootViewController = navVC;
     return YES;

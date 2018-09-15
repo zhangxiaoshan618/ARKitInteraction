@@ -36,4 +36,6 @@
 
 @property (nonatomic, weak) id<VirtualObjectSelectionViewControllerDelegate> delegate;
 
+- (void)updateObjectAvailabilityFor:(ARPlaneAnchor *)planeAnchor;
+
 @end

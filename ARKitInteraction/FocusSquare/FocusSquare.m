@@ -108,7 +108,9 @@
 - (void)displayAsOpenFor:(ARHitTestResult *)hitTestResult camera:(ARCamera *)camera {
     [self performOpenAnimation];
     simd_float3 position = [PositionTranslation getTranslationWithMatrixFloat4x4:hitTestResult.worldTransform];
-    [self.recentFocusSquarePositions addObject:hitTestResult];
+    if (hitTestResult) {
+        [self.recentFocusSquarePositions addObject:hitTestResult];
+    }
     [self updateTransformFor:position hitTestResult:hitTestResult camera:camera];
     
 }
@@ -463,7 +465,7 @@
     return [PositionTranslation getTranslationWithMatrixFloat4x4:self.stateHitTestResult.worldTransform];
 }
 
-- (void)setState:(FocusSquareState)state for:(ARHitTestResult *)hitTestResult camera:(ARCamera *)camera {
+- (void)setState:(FocusSquareState)state forHitTestResult:(ARHitTestResult *)hitTestResult camera:(ARCamera *)camera {
     if (self.state != state) {
         self.state = state;
         switch (state) {

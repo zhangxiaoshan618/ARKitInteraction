@@ -10,5 +10,8 @@
 
 @interface ViewController (Actions) <UIPopoverPresentationControllerDelegate>
 
+- (void)showVirtualObjectSelectionViewController;
+- (void)restartExperience;
+
 @end
 

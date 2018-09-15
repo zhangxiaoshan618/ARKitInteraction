@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ARKit/ARKit.h>
 
 typedef NS_ENUM(NSUInteger, MessageType) {
     MessageTypeTrackingStateEscalation,
@@ -33,5 +34,10 @@ typedef NS_ENUM(NSUInteger, MessageType) {
 
 - (void)cancelAllScheduledMessages;
 
+- (void)scheduleMessage:(NSString *)text inSeconds:(NSTimeInterval)seconds messageType:(MessageType)messageType;
+
+- (void)showTrackingQualityInfoFor:(ARTrackingState)trackingState reason:(ARTrackingStateReason)reason autoHide:(BOOL)autoHide;
+
+- (void)escalateFeedbackFor:(ARTrackingState)trackingState reason:(ARTrackingStateReason)reason seconds:(NSTimeInterval)seconds;
 @end
 

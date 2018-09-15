@@ -21,6 +21,7 @@ typedef NS_ENUM(NSUInteger, FocusSquareState) {
 @property (nonatomic, strong, readonly) ARPlaneAnchor *currentPlaneAnchor;
 @property (nonatomic, strong, readonly) NSMutableArray<NSNumber *> *recentFocusSquareAlignments;
 
+- (void)hide;
 - (void)unhide;
 + (CGFloat)size;
 + (CGFloat)thickness;
@@ -29,5 +30,6 @@ typedef NS_ENUM(NSUInteger, FocusSquareState) {
 + (CGFloat)animationDuration;
 + (UIColor *)primaryColor;
 + (UIColor *)fillColor;
+- (void)setState:(FocusSquareState)state forHitTestResult:(ARHitTestResult *)hitTestResult camera:(ARCamera *)camera;
 
 @end

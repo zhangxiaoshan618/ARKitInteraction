@@ -7,7 +7,6 @@
 //
 
 #import "VirtualObjectInteraction.h"
-#import "VirtualObjectARView.h"
 #import "ThresholdPanGesture.h"
 #import "VirtualObject.h"
 

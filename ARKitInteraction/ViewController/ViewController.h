@@ -18,7 +18,7 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet VirtualObjectARView *sceneView;
+@property (nonatomic, strong) VirtualObjectARView *sceneView;
 
 @property (nonatomic, strong) UIButton *addObjectButton;
 
@@ -41,11 +41,15 @@
 ///标记AR体验是否可用于重新启动。
 @property (nonatomic, assign) BOOL isRestartAvailable;
 ///用于协调从场景添加或删除节点的串行队列。
-@property (nonatomic, assign) dispatch_queue_t updateQueue;
+@property (nonatomic, strong) dispatch_queue_t updateQueue;
 
 @property (nonatomic, assign, readonly) CGPoint screenCenter;
 @property (nonatomic, strong, readonly) ARSession *session;
 
 - (void)resetTracking;
+
+- (void)displayErrorMessage:(NSString *)title message:(NSString *)message;
+
+- (void)updateFocusSquare:(BOOL)isObjectVisible;
 
 @end

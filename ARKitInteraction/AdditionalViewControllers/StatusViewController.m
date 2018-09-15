@@ -107,7 +107,7 @@
 }
 
 
-#pragma mark
+#pragma mark -
 
 - (void)showTrackingQualityInfoFor:(ARTrackingState)trackingState reason:(ARTrackingStateReason)reason autoHide:(BOOL)autoHide {
     [self showMessage:[self presentationStringWith:trackingState andReason:reason] autoHide:autoHide];
@@ -115,20 +115,20 @@
 
 - (void)escalateFeedbackFor:(ARTrackingState)trackingState reason:(ARTrackingStateReason)reason seconds:(NSTimeInterval)seconds {
     [self cancelScheduledMessageFor:MessageTypeTrackingStateEscalation];
-    
+
     __weak typeof(self) weakSelf = self;
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:seconds repeats:NO block:^(NSTimer * _Nonnull timer) {
         [weakSelf cancelScheduledMessageFor:MessageTypeTrackingStateEscalation];
-        
+
         NSMutableString *message = [NSMutableString stringWithString: [self presentationStringWith:trackingState andReason:reason]];
         NSString *recommendation = [weakSelf recommendationWith:trackingState andReason:reason];
         if (recommendation != nil) {
             [message appendString:recommendation];
         }
-        
+
         [weakSelf showMessage:message.copy autoHide:NO];
     }];
-    
+
     self.timers[[NSNumber numberWithInteger:MessageTypeTrackingStateEscalation]] = timer;
 }
 

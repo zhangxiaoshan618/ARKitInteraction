@@ -53,4 +53,6 @@
 
 - (void)reset;
 
+- (void)adjustOntoPlaneAnchor:(ARPlaneAnchor *)anchor usingNode:(SCNNode *)node;
+
 @end

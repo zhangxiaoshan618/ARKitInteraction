@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3C97C976555CCF21B23EC084 /* libPods-ARKitInteraction.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C92F81556EF3892EDF0D0D7D /* libPods-ARKitInteraction.a */; };
-		6E748229214A05F200E66D1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E748228214A05F200E66D1F /* Media.xcassets */; };
 		6EC515D1214D2D3300033705 /* PaymentOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC515CE214D2D3300033705 /* PaymentOrderViewController.m */; };
 		6EC515D2214D2D3300033705 /* ConfirmOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC515D0214D2D3300033705 /* ConfirmOrderViewController.m */; };
 		6EC515DA214D2D6D00033705 /* CanDeletePictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC515D4214D2D6D00033705 /* CanDeletePictureCell.m */; };
@@ -16,16 +15,11 @@
 		6EC515DD214D2D6D00033705 /* GoodsIntroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC515D9214D2D6D00033705 /* GoodsIntroCell.m */; };
 		6EC515E2214D2DA900033705 /* ClassItemArrayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC515DF214D2DA900033705 /* ClassItemArrayModel.m */; };
 		6EC515E3214D2DA900033705 /* ConfirmOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC515E0214D2DA900033705 /* ConfirmOrderModel.m */; };
-		6EC515EB214D2DF900033705 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC515E8214D2DF900033705 /* UIColor+Category.m */; };
-		6EC515EC214D2DF900033705 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC515E9214D2DF900033705 /* Theme.m */; };
 		6EC51607214D2E8400033705 /* ShotedPicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC515FD214D2E8400033705 /* ShotedPicView.m */; };
 		6EC51608214D2E8400033705 /* ItemSelectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC515FF214D2E8400033705 /* ItemSelectCollectionViewCell.m */; };
 		6EC51609214D2E8400033705 /* ClassTypeSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC51603214D2E8400033705 /* ClassTypeSelectCell.m */; };
 		6EC5160A214D2E8400033705 /* ChoseItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC51605214D2E8400033705 /* ChoseItemView.m */; };
 		6EC5160B214D2E8400033705 /* MainFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC51606214D2E8400033705 /* MainFunctionView.m */; };
-		B30C392E214BE9BB00F444B4 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C392D214BE9BB00F444B4 /* MyViewController.m */; };
-		B30C3931214BE9CB00F444B4 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3930214BE9CB00F444B4 /* MyView.m */; };
-		6E74822C214A098600E66D1F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E74822B214A098600E66D1F /* LoginViewController.m */; };
 		B30C3934214BE9D600F444B4 /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3933214BE9D600F444B4 /* MyModel.m */; };
 		B30C3937214BE9E500F444B4 /* MyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3936214BE9E500F444B4 /* MyViewModel.m */; };
 		B30C393A214BEA8300F444B4 /* VirtualObjectARView.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3939214BEA8300F444B4 /* VirtualObjectARView.m */; };
@@ -37,11 +31,12 @@
 		B397CEC6214CC60700C3ADD7 /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B397CEC5214CC60700C3ADD7 /* StatusViewController.m */; };
 		B39853E1214D4A86006D3CFB /* ViewController+Actions.m in Sources */ = {isa = PBXBuildFile; fileRef = B39853E0214D4A86006D3CFB /* ViewController+Actions.m */; };
 		B39853E4214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B39853E3214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m */; };
+		B39853EC214D5D46006D3CFB /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = B39853E9214D5D46006D3CFB /* Theme.m */; };
+		B39853ED214D5D46006D3CFB /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B39853EA214D5D46006D3CFB /* UIColor+Category.m */; };
 		B3C7E4F6214CBB0D002992D6 /* ViewController+ObjectSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7E4F5214CBB0D002992D6 /* ViewController+ObjectSelection.m */; };
 		B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C89D214408ED008E87CF /* AppDelegate.m */; };
 		B3E4C8A0214408ED008E87CF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E4C89F214408ED008E87CF /* art.scnassets */; };
 		B3E4C8A3214408ED008E87CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C8A2214408ED008E87CF /* ViewController.m */; };
-		B3E4C8A6214408ED008E87CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E4C8A4214408ED008E87CF /* Main.storyboard */; };
 		B3E4C8A8214408EE008E87CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E4C8A7214408EE008E87CF /* Assets.xcassets */; };
 		B3E4C8AB214408EE008E87CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E4C8A9214408EE008E87CF /* LaunchScreen.storyboard */; };
 		B3E4C8AE214408EE008E87CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C8AD214408EE008E87CF /* main.m */; };
@@ -52,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		1B4158F8CF176958642A6AD7 /* Pods-ARKitInteraction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitInteraction.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitInteraction/Pods-ARKitInteraction.release.xcconfig"; sourceTree = "<group>"; };
-		6E748228214A05F200E66D1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		6EC515CD214D2D3300033705 /* PaymentOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentOrderViewController.h; sourceTree = "<group>"; };
 		6EC515CE214D2D3300033705 /* PaymentOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentOrderViewController.m; sourceTree = "<group>"; };
 		6EC515CF214D2D3300033705 /* ConfirmOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmOrderViewController.h; sourceTree = "<group>"; };
@@ -67,10 +61,6 @@
 		6EC515DF214D2DA900033705 /* ClassItemArrayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassItemArrayModel.m; sourceTree = "<group>"; };
 		6EC515E0214D2DA900033705 /* ConfirmOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmOrderModel.m; sourceTree = "<group>"; };
 		6EC515E1214D2DA900033705 /* ConfirmOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmOrderModel.h; sourceTree = "<group>"; };
-		6EC515E7214D2DF900033705 /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Category.h"; path = "ARKitInteraction/Tool/UIColor+Category.h"; sourceTree = SOURCE_ROOT; };
-		6EC515E8214D2DF900033705 /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Category.m"; path = "ARKitInteraction/Tool/UIColor+Category.m"; sourceTree = SOURCE_ROOT; };
-		6EC515E9214D2DF900033705 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Theme.m; path = ARKitInteraction/Tool/Theme.m; sourceTree = SOURCE_ROOT; };
-		6EC515EA214D2DF900033705 /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Theme.h; path = ARKitInteraction/Tool/Theme.h; sourceTree = SOURCE_ROOT; };
 		6EC515FD214D2E8400033705 /* ShotedPicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShotedPicView.m; path = ARKitInteraction/View/MainPage/ShotedPicView.m; sourceTree = SOURCE_ROOT; };
 		6EC515FE214D2E8400033705 /* ClassTypeSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassTypeSelectCell.h; path = ARKitInteraction/View/MainPage/ClassTypeSelectCell.h; sourceTree = SOURCE_ROOT; };
 		6EC515FF214D2E8400033705 /* ItemSelectCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemSelectCollectionViewCell.m; path = ARKitInteraction/View/MainPage/ItemSelectCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
@@ -81,12 +71,6 @@
 		6EC51604214D2E8400033705 /* ItemSelectCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemSelectCollectionViewCell.h; path = ARKitInteraction/View/MainPage/ItemSelectCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
 		6EC51605214D2E8400033705 /* ChoseItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChoseItemView.m; path = ARKitInteraction/View/MainPage/ChoseItemView.m; sourceTree = SOURCE_ROOT; };
 		6EC51606214D2E8400033705 /* MainFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainFunctionView.m; path = ARKitInteraction/View/MainPage/MainFunctionView.m; sourceTree = SOURCE_ROOT; };
-		B30C392C214BE9BB00F444B4 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		B30C392D214BE9BB00F444B4 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		B30C392F214BE9CB00F444B4 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
-		B30C3930214BE9CB00F444B4 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
-		6E74822A214A098600E66D1F /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		6E74822B214A098600E66D1F /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B30C3932214BE9D600F444B4 /* MyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
 		B30C3933214BE9D600F444B4 /* MyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
 		B30C3935214BE9E500F444B4 /* MyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewModel.h; sourceTree = "<group>"; };
@@ -110,6 +94,10 @@
 		B39853E0214D4A86006D3CFB /* ViewController+Actions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+Actions.m"; sourceTree = "<group>"; };
 		B39853E2214D5263006D3CFB /* ViewController+ARSCNViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+ARSCNViewDelegate.h"; sourceTree = "<group>"; };
 		B39853E3214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+ARSCNViewDelegate.m"; sourceTree = "<group>"; };
+		B39853E8214D5D46006D3CFB /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		B39853E9214D5D46006D3CFB /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
+		B39853EA214D5D46006D3CFB /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
+		B39853EB214D5D46006D3CFB /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
 		B3C7E4F4214CBB0D002992D6 /* ViewController+ObjectSelection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+ObjectSelection.h"; sourceTree = "<group>"; };
 		B3C7E4F5214CBB0D002992D6 /* ViewController+ObjectSelection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+ObjectSelection.m"; sourceTree = "<group>"; };
 		B3E4C899214408ED008E87CF /* ARKitInteraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitInteraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +106,6 @@
 		B3E4C89F214408ED008E87CF /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		B3E4C8A1214408ED008E87CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B3E4C8A2214408ED008E87CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B3E4C8A5214408ED008E87CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3E4C8A7214408EE008E87CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E4C8AA214408EE008E87CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3E4C8AC214408EE008E87CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,21 +143,8 @@
 		6E748224214A049A00E66D1F /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
-				6E748228214A05F200E66D1F /* Media.xcassets */,
 			);
 			path = MainVC;
-			sourceTree = "<group>";
-		};
-		6EC515E6214D2DD100033705 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-				6EC515EA214D2DF900033705 /* Theme.h */,
-				6EC515E9214D2DF900033705 /* Theme.m */,
-				6EC515E7214D2DF900033705 /* UIColor+Category.h */,
-				6EC515E8214D2DF900033705 /* UIColor+Category.m */,
-			);
-			name = Tool;
-			path = Tools;
 			sourceTree = "<group>";
 		};
 		6EC515FC214D2E2D00033705 /* MainPage */ = {
@@ -206,8 +180,6 @@
 				6EC515D0214D2D3300033705 /* ConfirmOrderViewController.m */,
 				6EC515CD214D2D3300033705 /* PaymentOrderViewController.h */,
 				6EC515CE214D2D3300033705 /* PaymentOrderViewController.m */,
-				B30C392C214BE9BB00F444B4 /* MyViewController.h */,
-				B30C392D214BE9BB00F444B4 /* MyViewController.m */,
 				B3E4C8A1214408ED008E87CF /* ViewController.h */,
 				B3E4C8A2214408ED008E87CF /* ViewController.m */,
 				B39853E2214D5263006D3CFB /* ViewController+ARSCNViewDelegate.h */,
@@ -243,8 +215,6 @@
 				6EC515D9214D2D6D00033705 /* GoodsIntroCell.m */,
 				6EC515D3214D2D6D00033705 /* SelectPictureCell.h */,
 				6EC515D6214D2D6D00033705 /* SelectPictureCell.m */,
-				B30C392F214BE9CB00F444B4 /* MyView.h */,
-				B30C3930214BE9CB00F444B4 /* MyView.m */,
 				B30C3938214BEA8300F444B4 /* VirtualObjectARView.h */,
 				B30C3939214BEA8300F444B4 /* VirtualObjectARView.m */,
 				B30C393B214C040300F444B4 /* ThresholdPanGesture.h */,
@@ -264,6 +234,24 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		B39853E6214D5BCC006D3CFB /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		B39853E7214D5CE2006D3CFB /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B39853E8214D5D46006D3CFB /* Theme.h */,
+				B39853E9214D5D46006D3CFB /* Theme.m */,
+				B39853EB214D5D46006D3CFB /* UIColor+Category.h */,
+				B39853EA214D5D46006D3CFB /* UIColor+Category.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		B3E4C890214408ED008E87CF = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +259,7 @@
 				B3E4C89A214408ED008E87CF /* Products */,
 				284349973684FED205025FA6 /* Pods */,
 				ABC0F5949FD2EA3C52146685 /* Frameworks */,
+				B39853E6214D5BCC006D3CFB /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,7 +274,7 @@
 		B3E4C89B214408ED008E87CF /* ARKitInteraction */ = {
 			isa = PBXGroup;
 			children = (
-				6EC515E6214D2DD100033705 /* Tool */,
+				B39853E7214D5CE2006D3CFB /* Tool */,
 				B30C3929214BE9A400F444B4 /* Model */,
 				B30C392A214BE9A400F444B4 /* View */,
 				B30C3928214BE9A400F444B4 /* ViewController */,
@@ -298,7 +287,6 @@
 				B3F11F5A2144D4E9008CADFC /* Utilities */,
 				B3F11F5C2144D4EA008CADFC /* VirtualObjects */,
 				B3E4C89F214408ED008E87CF /* art.scnassets */,
-				B3E4C8A4214408ED008E87CF /* Main.storyboard */,
 				B3E4C8A7214408EE008E87CF /* Assets.xcassets */,
 				B3E4C8A9214408EE008E87CF /* LaunchScreen.storyboard */,
 				B3E4C8AC214408EE008E87CF /* Info.plist */,
@@ -409,11 +397,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E748229214A05F200E66D1F /* Media.xcassets in Resources */,
 				B3E4C8A0214408ED008E87CF /* art.scnassets in Resources */,
 				B3E4C8AB214408EE008E87CF /* LaunchScreen.storyboard in Resources */,
 				B3E4C8A8214408EE008E87CF /* Assets.xcassets in Resources */,
-				B3E4C8A6214408ED008E87CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,12 +464,11 @@
 				B30C3934214BE9D600F444B4 /* MyModel.m in Sources */,
 				6EC51608214D2E8400033705 /* ItemSelectCollectionViewCell.m in Sources */,
 				6EC515D1214D2D3300033705 /* PaymentOrderViewController.m in Sources */,
-				B30C392E214BE9BB00F444B4 /* MyViewController.m in Sources */,
 				6EC515E3214D2DA900033705 /* ConfirmOrderModel.m in Sources */,
 				6EC515DB214D2D6D00033705 /* SelectPictureCell.m in Sources */,
 				B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */,
 				6EC515DA214D2D6D00033705 /* CanDeletePictureCell.m in Sources */,
-				6E74822C214A098600E66D1F /* LoginViewController.m in Sources */,
+				B39853EC214D5D46006D3CFB /* Theme.m in Sources */,
 				B3598CE1214C87110075A2C6 /* VirtualObjectInteraction.m in Sources */,
 				B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */,
 				B3C7E4F6214CBB0D002992D6 /* ViewController+ObjectSelection.m in Sources */,
@@ -496,7 +481,6 @@
 				6EC515E2214D2DA900033705 /* ClassItemArrayModel.m in Sources */,
 				B3F11F632144DF03008CADFC /* FocusSquare.m in Sources */,
 				6EC5160A214D2E8400033705 /* ChoseItemView.m in Sources */,
-				6EC515EB214D2DF900033705 /* UIColor+Category.m in Sources */,
 				B3E4C8A3214408ED008E87CF /* ViewController.m in Sources */,
 				B30C3937214BE9E500F444B4 /* MyViewModel.m in Sources */,
 				6EC51609214D2E8400033705 /* ClassTypeSelectCell.m in Sources */,
@@ -504,8 +488,7 @@
 				B30C393D214C040400F444B4 /* ThresholdPanGesture.m in Sources */,
 				6EC515DD214D2D6D00033705 /* GoodsIntroCell.m in Sources */,
 				B30C393A214BEA8300F444B4 /* VirtualObjectARView.m in Sources */,
-				6EC515EC214D2DF900033705 /* Theme.m in Sources */,
-				6E748227214A04C700E66D1F /* MainViewController.m in Sources */,
+				B39853ED214D5D46006D3CFB /* UIColor+Category.m in Sources */,
 				B33ABDAE214D13D500A65F04 /* VirtualObjectSelectionViewController.m in Sources */,
 				B39853E4214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m in Sources */,
 				B397CEC6214CC60700C3ADD7 /* StatusViewController.m in Sources */,
@@ -517,14 +500,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B3E4C8A4214408ED008E87CF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3E4C8A5214408ED008E87CF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B3E4C8A9214408EE008E87CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -654,17 +629,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B3158C12F4F03CCED00FD32A /* Pods-ARKitInteraction.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C4D54PMWT5;
+				DEVELOPMENT_TEAM = AHJHGYFA8S;
 				INFOPLIST_FILE = ARKitInteraction/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aaa.ARKitInteraction;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lianjia.ARKitInteraction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -675,17 +650,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B4158F8CF176958642A6AD7 /* Pods-ARKitInteraction.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C4D54PMWT5;
+				DEVELOPMENT_TEAM = AHJHGYFA8S;
 				INFOPLIST_FILE = ARKitInteraction/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aaa.ARKitInteraction;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lianjia.ARKitInteraction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
