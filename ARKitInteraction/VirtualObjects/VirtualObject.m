@@ -66,6 +66,47 @@
     return YES;
 }
 
+/*
+ 根据相对于`cameraTransform`提供的位置设置对象的位置。 如果`smoothMovement`为真，则新位置将与先前位置平均以避免大跳跃。
+   - 标签：VirtualObjectSetPosition
+ */
+
+- (void)setTransform:(simd_float4x4)newTransform relativeTo:(simd_float4x4)cameraTransform smoothMovement:(BOOL)smoothMovement alignment:(ARPlaneAnchorAlignment)alignment allowAnimation:(BOOL)allowAnimation {
+    simd_float3 cameraWorldPosition = [PositionTranslation getTranslationWithMatrixFloat4x4:cameraTransform];
+    simd_float3 positionOffsetFromCamera = [PositionTranslation getTranslationWithMatrixFloat4x4:newTransform] - cameraWorldPosition;
+    
+    //将物体距离相机的距离限制在最大10米。
+    if (simd_length(positionOffsetFromCamera) > 10) {
+        positionOffsetFromCamera = simd_normalize(positionOffsetFromCamera);
+        positionOffsetFromCamera *= 10;
+    }
+    
+    /*
+     计算过去十次更新中对象与相机的平均距离。 请注意，距离应用于从摄像机到内容的矢量，因此它仅影响到对象的距离。 平均确实_not_使内容“滞后”。
+     */
+    if (smoothMovement) {
+        CGFloat hitTestResultDistance = simd_length(positionOffsetFromCamera);
+        
+        //添加最新位置并保持最近10个距离以平滑。
+        [self.recentVirtualObjectDistances addObject:[NSNumber numberWithDouble:hitTestResultDistance]];
+        NSUInteger count = self.recentVirtualObjectDistances.count;
+        if (count > 10) {
+            [self.recentVirtualObjectDistances removeObjectsInRange:NSMakeRange(0, count - 10)];
+        }
+        
+        CGFloat reduce = 0;
+        for (NSNumber *value in self.recentVirtualObjectDistances) {
+            reduce += value.doubleValue;
+        }
+        CGFloat averageDistance = reduce / self.recentVirtualObjectDistances.count;
+        
+        simd_float3 averagedDistancePosition = simd_normalize(positionOffsetFromCamera) * averageDistance;
+        self.simdPosition = cameraWorldPosition + averagedDistancePosition;
+    }else {
+        self.simdPosition = cameraWorldPosition + positionOffsetFromCamera;
+    }
+}
+
 
 #pragma mark - 设置虚拟物品的对齐方式
 

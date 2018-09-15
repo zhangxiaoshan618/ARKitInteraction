@@ -9,8 +9,14 @@
 #import <SceneKit/SceneKit.h>
 #import <ARKit/ARKit.h>
 
+typedef NS_ENUM(NSUInteger, FocusSquareState) {
+    FocusSquareStateInitializing,
+    FocusSquareStateDetecting,
+};
+
 @interface FocusSquare : SCNNode
 
+@property (nonatomic, assign) FocusSquareState state;
 @property (nonatomic, assign, readonly) simd_float3 lastPosition;
 @property (nonatomic, strong, readonly) ARPlaneAnchor *currentPlaneAnchor;
 @property (nonatomic, strong, readonly) NSMutableArray<NSNumber *> *recentFocusSquareAlignments;

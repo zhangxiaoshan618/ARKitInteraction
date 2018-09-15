@@ -10,14 +10,8 @@
 #import "PositionTranslation.h"
 #import "Segment.h"
 
-typedef NS_ENUM(NSUInteger, FocusSquareState) {
-    FocusSquareStateInitializing,
-    FocusSquareStateDetecting,
-};
-
 @interface FocusSquare ()
 
-@property (nonatomic, assign) FocusSquareState state;
 @property (nonatomic, strong) ARHitTestResult *stateHitTestResult;
 @property (nonatomic, strong) ARCamera *stateCamera;
 @property (nonatomic, strong) UIColor *primaryColor;

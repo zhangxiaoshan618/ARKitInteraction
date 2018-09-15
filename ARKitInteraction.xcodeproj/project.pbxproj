@@ -25,12 +25,19 @@
 		6EC5160B214D2E8400033705 /* MainFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC51606214D2E8400033705 /* MainFunctionView.m */; };
 		B30C392E214BE9BB00F444B4 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C392D214BE9BB00F444B4 /* MyViewController.m */; };
 		B30C3931214BE9CB00F444B4 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3930214BE9CB00F444B4 /* MyView.m */; };
+		6E74822C214A098600E66D1F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E74822B214A098600E66D1F /* LoginViewController.m */; };
 		B30C3934214BE9D600F444B4 /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3933214BE9D600F444B4 /* MyModel.m */; };
 		B30C3937214BE9E500F444B4 /* MyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3936214BE9E500F444B4 /* MyViewModel.m */; };
 		B30C393A214BEA8300F444B4 /* VirtualObjectARView.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3939214BEA8300F444B4 /* VirtualObjectARView.m */; };
 		B30C393D214C040400F444B4 /* ThresholdPanGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C393C214C040300F444B4 /* ThresholdPanGesture.m */; };
 		B3318C502149F90000BA9F1F /* VirtualObjectLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B3318C4F2149F90000BA9F1F /* VirtualObjectLoader.m */; };
 		B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B3318C522149F96400BA9F1F /* VirtualObject.m */; };
+		B33ABDAE214D13D500A65F04 /* VirtualObjectSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33ABDAD214D13D500A65F04 /* VirtualObjectSelectionViewController.m */; };
+		B3598CE1214C87110075A2C6 /* VirtualObjectInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = B3598CE0214C87110075A2C6 /* VirtualObjectInteraction.m */; };
+		B397CEC6214CC60700C3ADD7 /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B397CEC5214CC60700C3ADD7 /* StatusViewController.m */; };
+		B39853E1214D4A86006D3CFB /* ViewController+Actions.m in Sources */ = {isa = PBXBuildFile; fileRef = B39853E0214D4A86006D3CFB /* ViewController+Actions.m */; };
+		B39853E4214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B39853E3214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m */; };
+		B3C7E4F6214CBB0D002992D6 /* ViewController+ObjectSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7E4F5214CBB0D002992D6 /* ViewController+ObjectSelection.m */; };
 		B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C89D214408ED008E87CF /* AppDelegate.m */; };
 		B3E4C8A0214408ED008E87CF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E4C89F214408ED008E87CF /* art.scnassets */; };
 		B3E4C8A3214408ED008E87CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C8A2214408ED008E87CF /* ViewController.m */; };
@@ -78,6 +85,8 @@
 		B30C392D214BE9BB00F444B4 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		B30C392F214BE9CB00F444B4 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
 		B30C3930214BE9CB00F444B4 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		6E74822A214A098600E66D1F /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		6E74822B214A098600E66D1F /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B30C3932214BE9D600F444B4 /* MyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
 		B30C3933214BE9D600F444B4 /* MyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
 		B30C3935214BE9E500F444B4 /* MyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewModel.h; sourceTree = "<group>"; };
@@ -91,6 +100,18 @@
 		B3318C4F2149F90000BA9F1F /* VirtualObjectLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VirtualObjectLoader.m; sourceTree = "<group>"; };
 		B3318C512149F96400BA9F1F /* VirtualObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualObject.h; sourceTree = "<group>"; };
 		B3318C522149F96400BA9F1F /* VirtualObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VirtualObject.m; sourceTree = "<group>"; };
+		B33ABDAC214D13D500A65F04 /* VirtualObjectSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualObjectSelectionViewController.h; sourceTree = "<group>"; };
+		B33ABDAD214D13D500A65F04 /* VirtualObjectSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VirtualObjectSelectionViewController.m; sourceTree = "<group>"; };
+		B3598CDF214C87110075A2C6 /* VirtualObjectInteraction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualObjectInteraction.h; sourceTree = "<group>"; };
+		B3598CE0214C87110075A2C6 /* VirtualObjectInteraction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VirtualObjectInteraction.m; sourceTree = "<group>"; };
+		B397CEC4214CC60700C3ADD7 /* StatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusViewController.h; sourceTree = "<group>"; };
+		B397CEC5214CC60700C3ADD7 /* StatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusViewController.m; sourceTree = "<group>"; };
+		B39853DF214D4A86006D3CFB /* ViewController+Actions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+Actions.h"; sourceTree = "<group>"; };
+		B39853E0214D4A86006D3CFB /* ViewController+Actions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+Actions.m"; sourceTree = "<group>"; };
+		B39853E2214D5263006D3CFB /* ViewController+ARSCNViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+ARSCNViewDelegate.h"; sourceTree = "<group>"; };
+		B39853E3214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+ARSCNViewDelegate.m"; sourceTree = "<group>"; };
+		B3C7E4F4214CBB0D002992D6 /* ViewController+ObjectSelection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+ObjectSelection.h"; sourceTree = "<group>"; };
+		B3C7E4F5214CBB0D002992D6 /* ViewController+ObjectSelection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+ObjectSelection.m"; sourceTree = "<group>"; };
 		B3E4C899214408ED008E87CF /* ARKitInteraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitInteraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E4C89C214408ED008E87CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3E4C89D214408ED008E87CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -187,6 +208,14 @@
 				6EC515CE214D2D3300033705 /* PaymentOrderViewController.m */,
 				B30C392C214BE9BB00F444B4 /* MyViewController.h */,
 				B30C392D214BE9BB00F444B4 /* MyViewController.m */,
+				B3E4C8A1214408ED008E87CF /* ViewController.h */,
+				B3E4C8A2214408ED008E87CF /* ViewController.m */,
+				B39853E2214D5263006D3CFB /* ViewController+ARSCNViewDelegate.h */,
+				B39853E3214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m */,
+				B39853DF214D4A86006D3CFB /* ViewController+Actions.h */,
+				B39853E0214D4A86006D3CFB /* ViewController+Actions.m */,
+				B3C7E4F4214CBB0D002992D6 /* ViewController+ObjectSelection.h */,
+				B3C7E4F5214CBB0D002992D6 /* ViewController+ObjectSelection.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -220,6 +249,8 @@
 				B30C3939214BEA8300F444B4 /* VirtualObjectARView.m */,
 				B30C393B214C040300F444B4 /* ThresholdPanGesture.h */,
 				B30C393C214C040300F444B4 /* ThresholdPanGesture.m */,
+				B3598CDF214C87110075A2C6 /* VirtualObjectInteraction.h */,
+				B3598CE0214C87110075A2C6 /* VirtualObjectInteraction.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,8 +298,6 @@
 				B3F11F5A2144D4E9008CADFC /* Utilities */,
 				B3F11F5C2144D4EA008CADFC /* VirtualObjects */,
 				B3E4C89F214408ED008E87CF /* art.scnassets */,
-				B3E4C8A1214408ED008E87CF /* ViewController.h */,
-				B3E4C8A2214408ED008E87CF /* ViewController.m */,
 				B3E4C8A4214408ED008E87CF /* Main.storyboard */,
 				B3E4C8A7214408EE008E87CF /* Assets.xcassets */,
 				B3E4C8A9214408EE008E87CF /* LaunchScreen.storyboard */,
@@ -290,6 +319,10 @@
 		B3F11F5B2144D4E9008CADFC /* AdditionalViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B397CEC4214CC60700C3ADD7 /* StatusViewController.h */,
+				B397CEC5214CC60700C3ADD7 /* StatusViewController.m */,
+				B33ABDAC214D13D500A65F04 /* VirtualObjectSelectionViewController.h */,
+				B33ABDAD214D13D500A65F04 /* VirtualObjectSelectionViewController.m */,
 			);
 			path = AdditionalViewControllers;
 			sourceTree = "<group>";
@@ -450,6 +483,11 @@
 				6EC515DB214D2D6D00033705 /* SelectPictureCell.m in Sources */,
 				B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */,
 				6EC515DA214D2D6D00033705 /* CanDeletePictureCell.m in Sources */,
+				6E74822C214A098600E66D1F /* LoginViewController.m in Sources */,
+				B3598CE1214C87110075A2C6 /* VirtualObjectInteraction.m in Sources */,
+				B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */,
+				B3C7E4F6214CBB0D002992D6 /* ViewController+ObjectSelection.m in Sources */,
+				B39853E1214D4A86006D3CFB /* ViewController+Actions.m in Sources */,
 				B3318C502149F90000BA9F1F /* VirtualObjectLoader.m in Sources */,
 				6EC5160B214D2E8400033705 /* MainFunctionView.m in Sources */,
 				6EC515D2214D2D3300033705 /* ConfirmOrderViewController.m in Sources */,
@@ -463,11 +501,14 @@
 				B30C3937214BE9E500F444B4 /* MyViewModel.m in Sources */,
 				6EC51609214D2E8400033705 /* ClassTypeSelectCell.m in Sources */,
 				B3E4C8AE214408EE008E87CF /* main.m in Sources */,
-				B30C3931214BE9CB00F444B4 /* MyView.m in Sources */,
 				B30C393D214C040400F444B4 /* ThresholdPanGesture.m in Sources */,
 				6EC515DD214D2D6D00033705 /* GoodsIntroCell.m in Sources */,
 				B30C393A214BEA8300F444B4 /* VirtualObjectARView.m in Sources */,
 				6EC515EC214D2DF900033705 /* Theme.m in Sources */,
+				6E748227214A04C700E66D1F /* MainViewController.m in Sources */,
+				B33ABDAE214D13D500A65F04 /* VirtualObjectSelectionViewController.m in Sources */,
+				B39853E4214D5263006D3CFB /* ViewController+ARSCNViewDelegate.m in Sources */,
+				B397CEC6214CC60700C3ADD7 /* StatusViewController.m in Sources */,
 				B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */,
 				B3F11F662144FE4A008CADFC /* Segment.m in Sources */,
 			);

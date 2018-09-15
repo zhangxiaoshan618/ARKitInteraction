@@ -43,4 +43,14 @@
 
 + (VirtualObject *)existingObjectContainingNode:(SCNNode *)node;
 
+/*
+ 根据相对于`cameraTransform`提供的位置设置对象的位置。 如果`smoothMovement`为真，则新位置将与先前位置平均以避免大跳跃。
+   - 标签：VirtualObjectSetPosition
+ */
+- (void)setTransform:(simd_float4x4)newTransform relativeTo:(simd_float4x4)cameraTransform smoothMovement:(BOOL)smoothMovement alignment:(ARPlaneAnchorAlignment)alignment allowAnimation:(BOOL)allowAnimation;
+
+- (BOOL)isPlacementValidOn:(ARPlaneAnchor *)planeAnchor;
+
+- (void)reset;
+
 @end
