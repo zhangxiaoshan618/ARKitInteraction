@@ -11,6 +11,6 @@ project 'ARKitInteraction'
     pod 'SDWebImage' , '=4.2.2'
     pod 'AFNetworking', '~> 3.1.0'
     pod 'YYModel', '= 1.0.4'
-
+    pod 'Masonry', '= 1.1.0’
 
 end

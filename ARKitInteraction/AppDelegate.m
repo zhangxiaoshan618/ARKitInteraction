@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "LJNetworkService.h"
 #import "AFNetworking.h"
+#import "ConfirmOrderViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,18 +20,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    UIImage *image = [UIImage imageNamed:@"home"];
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.9);
-    NSString *url = @"http://preview-app.api.ke.com/user/house/uploadNoteImage";
-    NSString *fileDataName = @"file_data";
-    [[LJNetworkService defaultService] postWithUrl:url parameters:@{@"showing_house_id":@"101102939530"} modelClass:nil constructingBody:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:imageData name:fileDataName fileName:@"haha.png" mimeType:@"image/jpeg"];
-    } progress:^(NSProgress *progress) {
-        
-    } completion:^(id data, NSError *error) {
-        
-    }];
-    
+    [UIApplication sharedApplication].delegate.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [UIApplication sharedApplication].delegate.window.backgroundColor = [UIColor whiteColor];
+    [[UIApplication sharedApplication].delegate.window makeKeyAndVisible];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+                        
+    ViewController *vc = [sb instantiateInitialViewController];
+    UINavigationController * navVC = [[UINavigationController alloc]initWithRootViewController:vc];
+    [UIApplication sharedApplication].delegate.window.rootViewController = navVC;
     return YES;
 }
 

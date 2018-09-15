@@ -27,22 +27,22 @@
     return self;
 }
 
-- (void)setState:(UIGestureRecognizerState)state {
-    [super setState:state];
-    
-    switch (state) {
-        case UIGestureRecognizerStateBegan:
-            
-            break;
-        case UIGestureRecognizerStateChanged:
-            
-            break;
-            
-        default:
-            self.isThresholdExceeded = NO;
-            break;
-    }
-}
+//- (void)setState:(UIGestureRecognizerState)state {
+//    [super setState:state];
+//
+//    switch (state) {
+//        case UIGestureRecognizerStateBegan:
+//
+//            break;
+//        case UIGestureRecognizerStateChanged:
+//
+//            break;
+//
+//        default:
+//            self.isThresholdExceeded = NO;
+//            break;
+//    }
+//}
 
 // 返回应根据触摸次数使用的阈值。
 + (CGFloat)thresholdForTouchCount:(NSInteger)count {
@@ -59,18 +59,18 @@
     return threshold;
 }
 
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [super touchesMoved:touches withEvent:event];
-    
-    CGFloat translationMagnitude = [PositionPoint getLengthWithPoint:[self translationInView:self.view]];
-    
-    //根据使用的触摸次数调整阈值。
-    NSInteger threshold = [ThresholdPanGesture thresholdForTouchCount: touches.count];
-    
-    if (!self.isThresholdExceeded && translationMagnitude > threshold) {
-        self.isThresholdExceeded = YES;
-        [self setTranslation:CGPointZero inView:self.view];
-    }
-}
+//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    [super touchesMoved:touches withEvent:event];
+//    
+//    CGFloat translationMagnitude = [PositionPoint getLengthWithPoint:[self translationInView:self.view]];
+//
+//    //根据使用的触摸次数调整阈值。
+//    NSInteger threshold = [ThresholdPanGesture thresholdForTouchCount: touches.count];
+//
+//    if (!self.isThresholdExceeded && translationMagnitude > threshold) {
+//        self.isThresholdExceeded = YES;
+//        [self setTranslation:CGPointZero inView:self.view];
+//    }
+//}
 
 @end
