@@ -15,6 +15,8 @@
 		B30C3931214BE9CB00F444B4 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3930214BE9CB00F444B4 /* MyView.m */; };
 		B30C3934214BE9D600F444B4 /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3933214BE9D600F444B4 /* MyModel.m */; };
 		B30C3937214BE9E500F444B4 /* MyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3936214BE9E500F444B4 /* MyViewModel.m */; };
+		B30C393A214BEA8300F444B4 /* VirtualObjectARView.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C3939214BEA8300F444B4 /* VirtualObjectARView.m */; };
+		B30C393D214C040400F444B4 /* ThresholdPanGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = B30C393C214C040300F444B4 /* ThresholdPanGesture.m */; };
 		B3318C502149F90000BA9F1F /* VirtualObjectLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B3318C4F2149F90000BA9F1F /* VirtualObjectLoader.m */; };
 		B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B3318C522149F96400BA9F1F /* VirtualObject.m */; };
 		B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C89D214408ED008E87CF /* AppDelegate.m */; };
@@ -44,6 +46,10 @@
 		B30C3933214BE9D600F444B4 /* MyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
 		B30C3935214BE9E500F444B4 /* MyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewModel.h; sourceTree = "<group>"; };
 		B30C3936214BE9E500F444B4 /* MyViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewModel.m; sourceTree = "<group>"; };
+		B30C3938214BEA8300F444B4 /* VirtualObjectARView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualObjectARView.h; sourceTree = "<group>"; };
+		B30C3939214BEA8300F444B4 /* VirtualObjectARView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VirtualObjectARView.m; sourceTree = "<group>"; };
+		B30C393B214C040300F444B4 /* ThresholdPanGesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThresholdPanGesture.h; sourceTree = "<group>"; };
+		B30C393C214C040300F444B4 /* ThresholdPanGesture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThresholdPanGesture.m; sourceTree = "<group>"; };
 		B3158C12F4F03CCED00FD32A /* Pods-ARKitInteraction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitInteraction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitInteraction/Pods-ARKitInteraction.debug.xcconfig"; sourceTree = "<group>"; };
 		B3318C4E2149F90000BA9F1F /* VirtualObjectLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualObjectLoader.h; sourceTree = "<group>"; };
 		B3318C4F2149F90000BA9F1F /* VirtualObjectLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VirtualObjectLoader.m; sourceTree = "<group>"; };
@@ -133,6 +139,10 @@
 			children = (
 				B30C392F214BE9CB00F444B4 /* MyView.h */,
 				B30C3930214BE9CB00F444B4 /* MyView.m */,
+				B30C3938214BEA8300F444B4 /* VirtualObjectARView.h */,
+				B30C3939214BEA8300F444B4 /* VirtualObjectARView.m */,
+				B30C393B214C040300F444B4 /* ThresholdPanGesture.h */,
+				B30C393C214C040300F444B4 /* ThresholdPanGesture.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -365,6 +375,8 @@
 				B30C3937214BE9E500F444B4 /* MyViewModel.m in Sources */,
 				B3E4C8AE214408EE008E87CF /* main.m in Sources */,
 				B30C3931214BE9CB00F444B4 /* MyView.m in Sources */,
+				B30C393D214C040400F444B4 /* ThresholdPanGesture.m in Sources */,
+				B30C393A214BEA8300F444B4 /* VirtualObjectARView.m in Sources */,
 				6E748227214A04C700E66D1F /* MainViewController.m in Sources */,
 				B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */,
 				B3F11F662144FE4A008CADFC /* Segment.m in Sources */,
@@ -513,9 +525,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XW5558TH45;
+				DEVELOPMENT_TEAM = AHJHGYFA8S;
 				INFOPLIST_FILE = ARKitInteraction/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,9 +544,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XW5558TH45;
+				DEVELOPMENT_TEAM = AHJHGYFA8S;
 				INFOPLIST_FILE = ARKitInteraction/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
