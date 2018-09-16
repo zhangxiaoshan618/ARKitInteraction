@@ -152,7 +152,7 @@ static const CGFloat itemViewHeight = 200;
 - (void)clickNextButton {
     [_shotPicVeiw removeFromSuperview];
     [self hideImageView];
-    if (_resultStr) {
+    if (_resultStr && self.picArray.count) {
         NSDictionary *dic = @{@"price_id":_resultStr};
         [[LJNetworkService defaultService] postWithUrl:@"http://10.26.9.140:8020/home/orderconfirm" parameters:dic modelClass:nil completion:^(id data, NSError *error) {
             ConfirmOrderModel *confirmModel = [ConfirmOrderModel yy_modelWithDictionary:data[@"data"]];
@@ -163,6 +163,14 @@ static const CGFloat itemViewHeight = 200;
             confirmVC.confirmModel = confirmModel;
             [self.navigationController pushViewController:confirmVC animated:YES];
         }];
+    } else if (!_resultStr.length){
+        UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"请先选择物品" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        [alertVc addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:nil]];
+        [self presentViewController:alertVc animated:YES completion:nil];
+    } else {
+        UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"请先保存拍照图片" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        [alertVc addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:nil]];
+        [self presentViewController:alertVc animated:YES completion:nil];
     }
 }
 

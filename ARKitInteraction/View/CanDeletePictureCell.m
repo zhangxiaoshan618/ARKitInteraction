@@ -42,8 +42,9 @@
     _deleteImage.image = [UIImage imageNamed:@"close"];
     [self addSubview:_deleteImage];
     [_deleteImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(@-30);
-        make.top.equalTo(@30);
+        make.right.equalTo(@-20);
+        make.top.equalTo(@5);
+        make.height.width.equalTo(@23);
     }];
     
     //删除按钮
@@ -51,8 +52,8 @@
     [_deleteControl addTarget:self action:@selector(clickDeleteButton) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_deleteControl];
     [_deleteControl mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(self.deleteImage).offset(-10);
-        make.bottom.right.equalTo(@10);
+        make.left.top.equalTo(self.deleteImage).offset(-3);
+        make.bottom.right.equalTo(self.deleteImage).offset(3);
     }];
 }
 
