@@ -24,7 +24,6 @@ static const CGFloat itemViewHeight = 200;
 @interface OCViewController () <MainFunctionViewDelegate, ChoseItemViewDelegate>
 
 @property (nonatomic, strong) ViewController *arVC;
-@property (nonatomic, strong) VirtualObjectSelectionViewController *vc;
 @property (nonatomic, strong) NSArray<VirtualObject *> *allVirtualObject;
 
 @property (nonatomic, strong) ChoseItemView *itemView;
@@ -241,14 +240,6 @@ static const CGFloat itemViewHeight = 200;
         _arVC = vc;
     }
     return _arVC;
-}
-
-- (VirtualObjectSelectionViewController *)vc {
-    if (!_vc) {
-        VirtualObjectSelectionViewController *controller = [VirtualObjectSelectionViewController new];
-        _vc = controller;
-    }
-    return _vc;
 }
 
 + (NSArray<VirtualObject *> *)availableObjects {
