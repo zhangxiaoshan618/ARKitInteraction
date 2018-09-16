@@ -17,6 +17,7 @@
 #import "Theme.h"
 #import "ConfirmOrderViewController.h"
 #import "ClassItemArrayModel.h"
+#import "MyOrderViewController.h"
 
 static const CGFloat itemViewHeight = 200;
 
@@ -172,6 +173,11 @@ static const CGFloat itemViewHeight = 200;
         [alertVc addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:nil]];
         [self presentViewController:alertVc animated:YES completion:nil];
     }
+}
+
+- (void)mineButtonClicked {
+    MyOrderViewController *myOrderViewController = [[MyOrderViewController alloc]init];
+    [self.navigationController pushViewController:myOrderViewController animated:YES];
 }
 
 - (void)showImageView {
