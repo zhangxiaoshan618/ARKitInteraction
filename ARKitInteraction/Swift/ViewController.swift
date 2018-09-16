@@ -97,6 +97,15 @@ class ViewController: UIViewController {
 
         session.pause()
     }
+    
+    // MARK: - 截取当前帧图片
+    @objc
+    func saveImage() -> UIImage {
+        let render = SCNRenderer(context: nil, options: nil)
+        render.scene = sceneView.scene;
+        return render.snapshot(atTime: CFAbsoluteTimeGetCurrent(), with: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), antialiasingMode: .multisampling4X)
+        
+    }
 
     // MARK: - Scene content setup
 

@@ -131,17 +131,7 @@ static const CGFloat itemViewHeight = 200;
 - (void)shotButtonClicked {
     _shotPicVeiw = [ShotedPicView showInFatherView:self.view];
     _shotPicVeiw.delegate = self;
-    UIGraphicsBeginImageContext(self.view.bounds.size);
-    //CGContextRef context = UIGraphicsGetCurrentContext();
-    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    //    UIBezierPath *p = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:cornerRadius];
-    //    p.lineWidth = 0.01;
-    //    p.lineCapStyle = kCGLineCapRound;
-    //    p.lineJoinStyle = kCGLineJoinRound;
-    //    CGContextAddPath(context,p.CGPath);
-    //    CGContextClip(context);
-    _currentShotImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    _currentShotImage = [self.arVC saveImage];;
     [self showImageView];
     
 }
