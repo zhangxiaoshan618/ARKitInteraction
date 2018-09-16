@@ -83,6 +83,12 @@ typedef NS_ENUM(NSInteger, ConfirmOrderType) {
 - (void)commitOrder {
     switch (self.currentConfirmType) {
         case ConfirmOrderTypeCommit:
+            if (!self.selectCompanyModel) {
+                UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"请先选择装配公司" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+                [alertVc addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:nil]];
+                [self presentViewController:alertVc animated:YES completion:nil];
+                break;
+            }
             self.currentFinishPicCount = 0;
             self.currentFinishAllCount = 0;
             self.requestCount = 1+self.picArray.count;
