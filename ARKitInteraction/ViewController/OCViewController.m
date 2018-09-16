@@ -169,6 +169,7 @@ static const CGFloat itemViewHeight = 200;
 - (void)showImageView {
     if (!_shotImageView) {
         _shotImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [Theme screenWidth], [Theme screenHeight]-itemViewHeight)];
+        _shotImageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.view addSubview:_shotImageView];
         [self.view bringSubviewToFront:_shotImageView];
         _shotImageView.image = self.currentShotImage;
