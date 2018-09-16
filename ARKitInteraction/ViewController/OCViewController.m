@@ -178,6 +178,7 @@ static const CGFloat itemViewHeight = 200;
     if (!_shotImageView) {
         _shotImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [Theme screenWidth], [Theme screenHeight]-itemViewHeight)];
         _shotImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _shotImageView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.8];
         [self.view addSubview:_shotImageView];
         [self.view bringSubviewToFront:_shotImageView];
         _shotImageView.image = self.currentShotImage;

@@ -9,6 +9,7 @@
 #import "CanDeletePictureCell.h"
 #import "Masonry.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "BigPicture.h"
 
 @interface CanDeletePictureCell()
 @property (nonatomic, strong) UIImageView *mainImage;
@@ -30,6 +31,8 @@
 - (void)initUI {
     //头图
     _mainImage = [[UIImageView alloc]initWithFrame:CGRectZero];
+    _mainImage.userInteractionEnabled = YES;
+    [_mainImage addGestureRecognizer:[self tap]];
     [self addSubview:_mainImage];
     [_mainImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(@0);
@@ -76,5 +79,17 @@
     [_mainImage sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"goodImage"]];
 }
 
+- (UITapGestureRecognizer *) tap {
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapActionWith:)];
+    return tap;
+}
+
+- (void)tapActionWith: (UITapGestureRecognizer *)sinder {
+    UIView *view = sinder.view;
+    if ([view isKindOfClass:UIImageView.class]) {
+        BigPicture *picture = [[BigPicture alloc] initWithImageView: (UIImageView *)view];
+        [picture showPicture];
+    }
+}
 
 @end

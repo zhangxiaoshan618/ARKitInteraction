@@ -53,6 +53,7 @@
 		B398543A214DADA4006D3CFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3985439214DADA4006D3CFB /* ViewController.m */; };
 		B3BFA86D214DB01400FF33C4 /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BFA86C214DB01400FF33C4 /* OCViewController.m */; };
 		B3BFA86F214DC50F00FF33C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3BFA86E214DC50F00FF33C4 /* Main.storyboard */; };
+		B3BFA872214DE84D00FF33C4 /* BigPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BFA870214DE84C00FF33C4 /* BigPicture.m */; };
 		B3C7E4F6214CBB0D002992D6 /* ViewController+ObjectSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7E4F5214CBB0D002992D6 /* ViewController+ObjectSelection.m */; };
 		B3E4C89E214408ED008E87CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E4C89D214408ED008E87CF /* AppDelegate.m */; };
 		B3E4C8A0214408ED008E87CF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E4C89F214408ED008E87CF /* art.scnassets */; };
@@ -144,6 +145,8 @@
 		B3BFA86B214DB01400FF33C4 /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
 		B3BFA86C214DB01400FF33C4 /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
 		B3BFA86E214DC50F00FF33C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B3BFA870214DE84C00FF33C4 /* BigPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigPicture.m; sourceTree = "<group>"; };
+		B3BFA871214DE84C00FF33C4 /* BigPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigPicture.h; sourceTree = "<group>"; };
 		B3C7E4F4214CBB0D002992D6 /* ViewController+ObjectSelection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+ObjectSelection.h"; sourceTree = "<group>"; };
 		B3C7E4F5214CBB0D002992D6 /* ViewController+ObjectSelection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+ObjectSelection.m"; sourceTree = "<group>"; };
 		B3E4C899214408ED008E87CF /* ARKitInteraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitInteraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +259,8 @@
 		B30C392A214BE9A400F444B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B3BFA871214DE84C00FF33C4 /* BigPicture.h */,
+				B3BFA870214DE84C00FF33C4 /* BigPicture.m */,
 				6EC5165F214D85BB00033705 /* TotalPriceCell.h */,
 				6EC5165E214D85BB00033705 /* TotalPriceCell.m */,
 				6EC5165B214D85B000033705 /* ConfirmOrderSelectCompanyCell.h */,
@@ -580,6 +585,7 @@
 				B3BFA86D214DB01400FF33C4 /* OCViewController.m in Sources */,
 				B398542B214DAB7B006D3CFB /* VirtualObject.swift in Sources */,
 				B3318C532149F96400BA9F1F /* VirtualObject.m in Sources */,
+				B3BFA872214DE84D00FF33C4 /* BigPicture.m in Sources */,
 				6EC515DA214D2D6D00033705 /* CanDeletePictureCell.m in Sources */,
 				6EC51657214D858900033705 /* ShotedPicView.m in Sources */,
 				6EC51654214D858900033705 /* ItemSelectCollectionViewCell.m in Sources */,
