@@ -46,7 +46,7 @@
     [self addSubview:_deleteImage];
     [_deleteImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(@-20);
-        make.top.equalTo(@5);
+        make.top.equalTo(@0);
         make.height.width.equalTo(@23);
     }];
     
