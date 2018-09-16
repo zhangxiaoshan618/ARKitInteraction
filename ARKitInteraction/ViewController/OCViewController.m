@@ -147,6 +147,9 @@ static const CGFloat itemViewHeight = 200;
         _picArray = [NSMutableArray array];
     }
     [self.picArray addObject:_currentShotImage];
+    UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"保存成功" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    [alertVc addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alertVc animated:YES completion:nil];
 
 }
 
@@ -187,8 +190,9 @@ static const CGFloat itemViewHeight = 200;
         _shotImageView.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.7];
         [self.view addSubview:_shotImageView];
         [self.view bringSubviewToFront:_shotImageView];
-        _shotImageView.image = self.currentShotImage;
+        
     }
+    _shotImageView.image = self.currentShotImage;
     _shotImageView.hidden = NO;
 }
 
